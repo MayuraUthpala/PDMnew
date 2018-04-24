@@ -24,6 +24,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     // private DrawerLayout emr,dul,ini,ham,upa,faq;
@@ -31,7 +34,14 @@ public class MainActivity extends AppCompatActivity {
     private ActionBarDrawerToggle mToggle;
     private Toolbar mToolbar;
     private FirebaseAuth auth;
-
+    private DatabaseReference databaseReference;
+    private Button btnChangePassword, btnRemoveUser, signOut;
+    private TextView email;
+    private EditText newPassword;
+    private ProgressBar progressBar;
+    private TextView mNameTextView;
+    private TextView mEmailTextView;
+    String cid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +74,9 @@ public class MainActivity extends AppCompatActivity {
                             case (R.id.service):
                                 startActivity(new Intent(getApplicationContext(), RatingActivity.class));
                                 break;
+                            case (R.id.EmSer):
+                                startActivity(new Intent(getApplicationContext(), EmergencyServices.class));
+                                break;
                             case (R.id.logout):
                                 signOut();
                                 return true;
@@ -80,6 +93,46 @@ public class MainActivity extends AppCompatActivity {
                         return true;
                     }
                 });
+
+        View navHeaderView = navigationView.getHeaderView(0);
+        mEmailTextView = (TextView) navHeaderView.findViewById(R.id.textView_email);
+        mNameTextView=(TextView) navHeaderView.findViewById(R.id.textView_name);
+
+        auth = FirebaseAuth.getInstance();
+        databaseReference=FirebaseDatabase.getInstance().getReference().child("users");
+        cid=auth.getCurrentUser().getUid();
+        databaseReference.child(cid).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                if(dataSnapshot.exists()){
+                    String name=dataSnapshot.child("fname").getValue().toString();
+                    mNameTextView.setText(name);
+
+                }
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
+
+
+        //get current user and set email address
+        final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if(user==null)
+        {
+            startActivity(new Intent(MainActivity.this, LoginActivity.class));
+            finish();
+
+        }else {
+         //   checkUserExist();
+            mEmailTextView.setText(user.getEmail());
+           // setDataToView(user);
+
+        }
 
    /* @Override
     protected void onCreate(Bundle savedInstanceState) {
