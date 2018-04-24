@@ -35,10 +35,7 @@ public class MainActivity extends AppCompatActivity {
     private Toolbar mToolbar;
     private FirebaseAuth auth;
     private DatabaseReference databaseReference;
-    private Button btnChangePassword, btnRemoveUser, signOut;
-    private TextView email;
-    private EditText newPassword;
-    private ProgressBar progressBar;
+
     private TextView mNameTextView;
     private TextView mEmailTextView;
     String cid;
