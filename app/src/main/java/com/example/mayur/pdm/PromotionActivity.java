@@ -28,10 +28,10 @@ public class PromotionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_promotion);
 
-       /* mToolbar=(Toolbar) findViewById(R.id.prom_toolbar);
+        mToolbar=(Toolbar) findViewById(R.id.prom_toolbar);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setTitle("Promotions");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);*/
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         listView=(ListView) findViewById(R.id.db_promlist);
 

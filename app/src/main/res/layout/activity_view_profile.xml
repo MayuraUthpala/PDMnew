@@ -108,18 +108,18 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dip"
-            android:background="@color/colorAccent"
+            android:background="@color/nnn"
             android:text="@string/btn_changepw"
-            android:textColor="@android:color/black" />
+            android:textColor="@android:color/white" />
 
         <Button
             android:id="@+id/remove_user_button"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dip"
-            android:background="@color/colorAccent"
+            android:background="@color/nnn"
             android:text="@string/remove_user"
-            android:textColor="@android:color/black" />
+            android:textColor="@android:color/white" />
 
 
     </LinearLayout>
