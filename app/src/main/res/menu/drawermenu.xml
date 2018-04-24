@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/EmSer" android:title="Emergency Service" />
     <item android:id="@+id/Dul" android:title="Dulip" />
     <item android:id="@+id/Ini" android:title="Inisha" />
