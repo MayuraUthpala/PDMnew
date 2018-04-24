@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mayur.pdm.ProfileActivity">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fname"
+        android:textColor="@android:color/black"
+        android:layout_gravity="left"
+        android:textSize="18dp"/>
+    <EditText
+        android:id="@+id/FirstName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:hint="@string/hint_fname"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/darker_gray" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lname"
+        android:textColor="@android:color/black"
+        android:layout_gravity="left"
+        android:textSize="18dp"/>
+    <EditText
+        android:id="@+id/LastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:hint="@string/hint_lname"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/darker_gray" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/address"
+        android:textColor="@android:color/black"
+        android:layout_gravity="left"
+        android:textSize="18dp"/>
+
+    <EditText
+        android:id="@+id/Address"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:hint="@string/hint_address"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/darker_gray" />
+
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="@string/phone"
+         android:textColor="@android:color/black"
+         android:layout_gravity="left"
+         android:textSize="18dp"/>
+
+     <EditText
+         android:id="@+id/Number"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginBottom="10dp"
+         android:hint="@string/hint_num"
+         android:textColor="@android:color/black"
+         android:textColorHint="@android:color/darker_gray"/>
+
+
+    <Button
+        android:id="@+id/btn_addProfile"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dip"
+        android:background="@color/colorAccent"
+        android:text="@string/btn_addProfile"
+        android:textColor="@android:color/black" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
+
