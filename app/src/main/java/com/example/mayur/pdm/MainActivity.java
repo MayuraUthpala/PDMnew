@@ -126,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
            // setDataToView(user);
 
         }
-        
+
     }
 
     private void signOut() {

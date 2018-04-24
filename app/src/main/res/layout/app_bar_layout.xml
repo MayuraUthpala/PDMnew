@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_alignParentStart="true"
-    android:background="#FF009E9E"
+    android:background="#795548"
     android:theme="@style/Base.ThemeOverlay.AppCompat.Dark.ActionBar"
     app:titleTextColor="@android:color/black"
     android:layout_alignParentLeft="true"></android.support.v7.widget.Toolbar>
