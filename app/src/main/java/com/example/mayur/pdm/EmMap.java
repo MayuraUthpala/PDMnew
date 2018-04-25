@@ -36,8 +36,8 @@ public class EmMap extends FragmentActivity implements OnMapReadyCallback {
         mMap = googleMap;
 
         // Add a marker in Sydney and move the camera
-        LatLng malabe = new LatLng(-6.914664, 79.973001);
-        mMap.addMarker(new MarkerOptions().position(malabe).title("Marker in SLIIT"));
+        LatLng malabe = new LatLng(6.927079, 79.861244);
+        mMap.addMarker(new MarkerOptions().position(malabe).title("OUR AUTUMOBILE SERVICE"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(malabe));
         if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             // TODO: Consider calling

@@ -72,7 +72,12 @@ public class MainActivity extends AppCompatActivity {
                                 break;
                             case (R.id.logout):
                                 signOut();
-                                return true;
+                                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                                break;
+                            case (R.id.faqs):
+                                startActivity(new Intent(getApplicationContext(), FAQs.class));
+                                break;
+                                //return true;
 
                         }
                         // set item as selected to persist highlight

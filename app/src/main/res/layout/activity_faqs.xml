@@ -11,13 +11,7 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     tools:context="com.example.mayur.pdm.FAQs">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:baselineAligned="false"
-    android:clipToPadding="false"
-    android:gravity="center"
-    android:orientation="horizontal">
+
 
     <ScrollView
         android:layout_width="match_parent"
@@ -50,47 +44,5 @@
         </com.ms.square.android.expandabletextview.ExpandableTextView>
 
     </ScrollView>
-</LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:baselineAligned="false"
-        android:clipToPadding="false"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
-
-            <com.ms.square.android.expandabletextview.ExpandableTextView
-                android:id="@+id/expandable_text_view1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:maxCollapsedLines="1"
-                app:animDuration="200"
-                >
-
-                <TextView
-                    android:id="@+id/expandable_text1"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginTop="8dp"
-                    android:textColor="#666"
-                    android:textSize="16sp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-                <ImageButton
-                    android:id="@+id/expand_collapse1"
-                    android:layout_gravity="right|bottom"
-                    android:padding="16dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-            </com.ms.square.android.expandabletextview.ExpandableTextView>
-
-        </ScrollView>
-    </LinearLayout>
 </LinearLayout>
 
