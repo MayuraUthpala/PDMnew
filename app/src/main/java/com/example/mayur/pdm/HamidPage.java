@@ -9,5 +9,7 @@ public class HamidPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hamid_page);
+
+        ///
     }
 }
