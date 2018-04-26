@@ -7,16 +7,21 @@ import java.util.Date;
  */
 
 public class Message {
-    private String content;
+    private String content,username;
     private long messageTime;
 
     public Message(){
 
     }
-    public Message(String content){
+    public Message(String content,String username){
         this.content=content;
+        this.username = username;
         messageTime = new Date().getTime();
     }
+
+    public String getUsername(){return username;}
+
+    public void setUsername(String username){ this.username = username;}
 
     public String getContent(){
         return content;
