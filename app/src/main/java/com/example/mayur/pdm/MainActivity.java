@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         assert getSupportActionBar() != null;
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        if(cid.equals("ucFsb8XG3Gfyf2crQaQL5QnMlhz1")){
+        if(cid.equals("VIrVk6FhtPPpBpY5FMBoqgYVNVn1")){
             mDrawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED, findViewById(R.id.navigation_view));
             NavigationView navigationViewAdmin = findViewById(R.id.navigation_viewAdmin);
             navigationViewAdmin.setNavigationItemSelectedListener(
