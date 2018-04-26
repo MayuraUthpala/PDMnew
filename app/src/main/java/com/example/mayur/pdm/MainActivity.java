@@ -77,6 +77,9 @@ public class MainActivity extends AppCompatActivity {
                             case (R.id.faqs):
                                 startActivity(new Intent(getApplicationContext(), FAQs.class));
                                 break;
+                            case (R.id.book):
+                                startActivity(new Intent(getApplicationContext(), Book.class));
+                                break;
                                 //return true;
 
                         }
