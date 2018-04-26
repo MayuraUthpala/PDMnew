@@ -23,11 +23,11 @@ public class FAQs extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_faqs);
 
-        expandableTextView = (ExpandableTextView)findViewById(R.id.expandable_text_view);
-        expandableTextView.setText(longText1);
+        //expandableTextView = (ExpandableTextView)findViewById(R.id.expandable_text_view);
+       // expandableTextView.setText(longText1);
 
-        //expandableTextView = (ExpandableTextView)findViewById(R.id.expandable_text_view1);
-      //  expandableTextView.setText(longText2);
+       // expandableTextView = (ExpandableTextView)findViewById(R.id.expandable_text_view1);
+       // expandableTextView.setText(longText2);
 
 
     }
