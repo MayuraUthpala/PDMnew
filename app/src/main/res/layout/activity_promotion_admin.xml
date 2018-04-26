@@ -30,6 +30,7 @@
             android:text="Enter promotion text"
             android:textColor="@android:color/black"
             android:textColorHint="@android:color/darker_gray"
+            android:textSize="20dp"
             android:textStyle="bold" />
 
         <EditText
@@ -41,7 +42,7 @@
             android:lines="5"
             android:inputType="textCapSentences|textMultiLine"
             android:textColor="@android:color/black"
-            android:textColorHint="@android:color/black" />
+            android:textColorHint="@android:color/darker_gray" />
 
 
 
@@ -54,7 +55,7 @@
             android:background="@color/nnn"
             android:text="@string/btn_submit"
             android:layout_marginBottom="180dp"
-            android:textColor="@android:color/black" />
+            android:textColor="@android:color/white" />
 
 
     </LinearLayout>

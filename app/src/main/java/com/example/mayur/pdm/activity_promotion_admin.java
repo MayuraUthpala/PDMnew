@@ -37,6 +37,9 @@ public class activity_promotion_admin extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 ref.push().setValue(promtext.getText().toString());
+                Toast.makeText(getApplicationContext(),"Saved to database",Toast.LENGTH_SHORT).show();
+                promtext.setText("");
+
 
                        /* new DatabaseReference.CompletionListener() {
                     @Override
