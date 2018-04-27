@@ -37,6 +37,7 @@
         <activity android:name=".SignupActivity" />
         <activity android:name=".ResetPasswordActivity" />
         <activity android:name=".ProfileActivity" />
+
         <activity
             android:name=".PromotionActivity"
             android:parentActivityName=".MainActivity" />
@@ -62,7 +63,8 @@
         <activity
             android:name=".EmMap"
             android:label="@string/title_activity_em_map" />
-        <activity android:name=".activity_promotion_admin"></activity>
+        <activity android:name=".activity_promotion_admin"
+                  android:parentActivityName=".MainActivity"></activity>
     </application>
 
 </manifest>

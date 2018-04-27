@@ -7,7 +7,7 @@
     tools:context="com.example.mayur.pdm.ProfileActivity">
 
     <include
-        android:id="@+id/pw_toolbar"
+        android:id="@+id/prom_admin"
         layout="@layout/app_bar_layout">
 
     </include>

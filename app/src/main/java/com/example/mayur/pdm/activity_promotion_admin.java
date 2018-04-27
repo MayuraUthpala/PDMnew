@@ -3,6 +3,7 @@ package com.example.mayur.pdm;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,6 +20,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class activity_promotion_admin extends AppCompatActivity {
 
     private Button Add;
+    private Toolbar mToolbar;
 
 
     @Override
@@ -26,11 +28,16 @@ public class activity_promotion_admin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_promotion_admin);
 
+        mToolbar=(Toolbar) findViewById(R.id.prom_admin);
+        setSupportActionBar(mToolbar);
+        getSupportActionBar().setTitle("Promotions");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
 
         final DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Promotion");
 
 
-        Button Add = (Button) findViewById(R.id.btn_submitPromotion);
+        Add = (Button) findViewById(R.id.btn_submitPromotion);
         final EditText promtext = (EditText) findViewById(R.id.promotionadd);
 
         Add.setOnClickListener(new View.OnClickListener() {
