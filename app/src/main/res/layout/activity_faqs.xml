@@ -6,6 +6,7 @@
     android:id="@+id/fac_main"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:orientation="vertical"
     android:paddingBottom="16dp"
     android:paddingTop="16dp"
     android:paddingLeft="16dp"
@@ -13,36 +14,5 @@
     tools:context="com.example.mayur.pdm.FAQs">
 
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
 
-        <com.ms.square.android.expandabletextview.ExpandableTextView
-            android:id="@+id/expandable_text_view"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:maxCollapsedLines="1"
-            app:animDuration="200"
-            >
-
-            <TextView
-                android:id="@+id/expandable_text"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="8dp"
-                android:textColor="#666"
-                android:textSize="16sp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            
-            <ImageButton
-                android:id="@+id/expand_collapse"
-                android:layout_gravity="right|bottom"
-                android:padding="16dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </com.ms.square.android.expandabletextview.ExpandableTextView>
-
-    </ScrollView>
 </LinearLayout>
-

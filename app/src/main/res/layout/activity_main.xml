@@ -33,4 +33,17 @@
         >
     </android.support.design.widget.NavigationView>
 
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navigation_viewAdmin"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/White"
+        app:itemTextColor="@color/darkgray"
+        app:itemIconTint="@color/darkgray"
+        app:menu="@menu/draweradmin"
+        android:layout_gravity="end"
+        app:headerLayout="@layout/navigation_header"
+        >
+    </android.support.design.widget.NavigationView>
+
 </android.support.v4.widget.DrawerLayout>
