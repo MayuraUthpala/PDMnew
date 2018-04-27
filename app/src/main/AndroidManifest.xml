@@ -33,6 +33,15 @@
         <activity android:name=".EmHelp" />
         <activity android:name=".EmChat" />
         <activity android:name=".RatingActivity" />
+        <activity android:name=".Book" />
+        <activity android:name=".Offers" />
+        <activity android:name=".Customer_info" />
+        <activity android:name=".Payment_gateway" />
+        <activity android:name=".chooseService" />
+        <activity android:name=".Service_sec_opt" />
+        <activity android:name=".Tuneup_sec_opt" />
+        <activity android:name=".RunningRep_sec_opt" />
+        <activity android:name=".BookDateTime"></activity>
         <activity android:name=".SignupActivity" />
         <activity android:name=".ResetPasswordActivity" />
         <activity android:name=".ProfileActivity" />
