@@ -8,12 +8,108 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:381496230720:android:060aeb60862a5501",
+        "android_client_info": {
+          "package_name": "com.example.acer.booking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "381496230720-pn53ui5ereagmtmoo71hp72edu5gqb9m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.acer.booking",
+            "certificate_hash": "47a50e7875a853ac2a146cd2f30fca5a70b8df61"
+          }
+        },
+        {
+          "client_id": "381496230720-rrotqv7epeg08fn3hq5de759o2bf4gth.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBtNG_bsIfclwhObBa3EoIxaxIQAS1Txg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "381496230720-rrotqv7epeg08fn3hq5de759o2bf4gth.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:381496230720:android:264d7223c2b9c551",
+        "android_client_info": {
+          "package_name": "com.example.dulip.fuel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "381496230720-5j3ppc2kc7cvnevvqgt9q85sbfdu5s8k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dulip.fuel",
+            "certificate_hash": "8d0eb0ab6708baca40803a3a659b085ff4089c6f"
+          }
+        },
+        {
+          "client_id": "381496230720-rrotqv7epeg08fn3hq5de759o2bf4gth.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBtNG_bsIfclwhObBa3EoIxaxIQAS1Txg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "381496230720-rrotqv7epeg08fn3hq5de759o2bf4gth.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:381496230720:android:3e9fa16816950962",
         "android_client_info": {
           "package_name": "com.example.mayur.pdm"
         }
       },
       "oauth_client": [
+        {
+          "client_id": "381496230720-iu60tfbj1937942nfemgffj8omig8mij.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mayur.pdm",
+            "certificate_hash": "47a50e7875a853ac2a146cd2f30fca5a70b8df61"
+          }
+        },
         {
           "client_id": "381496230720-14q5fehakrd5sp0lb936fbjrq02nlvuk.apps.googleusercontent.com",
           "client_type": 1,

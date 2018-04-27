@@ -47,6 +47,7 @@ public class ProfileActivity extends AppCompatActivity {
         Address= (EditText)findViewById(R.id.Address);
         Mobile=(EditText) findViewById(R.id.Number);
         buttonAdd = (Button) findViewById(R.id.btn_addProfile);
+        //ggggg
 
 
 
