@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -20,6 +21,8 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
@@ -81,6 +84,39 @@ public class activity_promotion_admin extends AppCompatActivity {
 
             }
         });
+        //credit to https://stackoverflow.com/questions/44700447/when-click-on-listview-delete-it-and-delete-associated-data-with-it-in-firebas
+
+        final ArrayList<String> keyList = new ArrayList<>();
+        final ArrayList<String> items = new ArrayList<>();
+        ref.getRoot().child("Promotion")
+                .addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        for (DataSnapshot messages : dataSnapshot.getChildren()) {
+                            keyList.add(messages.getKey());
+                            items.add(messages.getValue(String.class));
+                        }
+                    }
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+                        /*handle errors*/
+                    }
+                });
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                items.remove(position);
+                adapter.remove(adapter.getItem(position));
+                adapter.notifyDataSetChanged();
+                //new code below
+                ref.getRoot().child("Promotion").child(keyList.get(position)).removeValue();
+                keyList.remove(position);
+
+            }
+        });
+
+
 
         Add.setOnClickListener(new View.OnClickListener() {
             @Override
