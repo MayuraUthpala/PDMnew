@@ -42,11 +42,10 @@
         <activity android:name=".Service_sec_opt" />
         <activity android:name=".Tuneup_sec_opt" />
         <activity android:name=".RunningRep_sec_opt" />
-        <activity android:name=".BookDateTime"></activity>
+        <activity android:name=".BookDateTime" />
         <activity android:name=".SignupActivity" />
         <activity android:name=".ResetPasswordActivity" />
         <activity android:name=".ProfileActivity" />
-
         <activity
             android:name=".PromotionActivity"
             android:parentActivityName=".MainActivity" />
@@ -72,8 +71,23 @@
         <activity
             android:name=".EmMap"
             android:label="@string/title_activity_em_map" />
-        <activity android:name=".activity_promotion_admin"
-                  android:parentActivityName=".MainActivity"></activity>
+        <activity
+            android:name=".activity_promotion_admin"
+            android:parentActivityName=".MainActivity" />
+
+        <service android:name=".MyFirebaseInstanceIdService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>
