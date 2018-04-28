@@ -33,7 +33,7 @@ public class LoginActivity extends AppCompatActivity {
 
         //if user already logged in, send to main
         if (auth.getCurrentUser() != null) {
-            startActivity(new Intent(LoginActivity.this, MainActivity.class));
+            startActivity(new Intent(LoginActivity.this, Splash.class));
             finish();
         }
 
@@ -92,7 +92,7 @@ public class LoginActivity extends AppCompatActivity {
                                         Toast.makeText(LoginActivity.this, getString(R.string.auth_failed), Toast.LENGTH_LONG).show();
                                     }
                                 } else {
-                                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                    Intent intent = new Intent(LoginActivity.this, Splash.class);
                                     startActivity(intent);
                                     finish();
                                 }
