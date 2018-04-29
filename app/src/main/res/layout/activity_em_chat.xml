@@ -5,6 +5,7 @@
     android:id="@+id/activity_em_chat"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/emergencychatbck"
 
     tools:context="com.example.mayur.pdm.EmChat">
     

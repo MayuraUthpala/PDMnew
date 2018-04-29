@@ -70,6 +70,11 @@ public class MainActivity extends AppCompatActivity {
                                     Intent accountActivity = new Intent(getApplicationContext(), activity_promotion_admin.class);
                                     startActivity(accountActivity);
                                     break;
+
+                                case (R.id.Emadchat):
+                                    startActivity(new Intent(getApplicationContext(), EmChat.class));
+                                    break;
+
                                 case (R.id.logout):
                                     signOut();
                                     startActivity(new Intent(getApplicationContext(), LoginActivity.class));
