@@ -24,7 +24,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="com.example.mayur.pdm.Splash" />
@@ -32,7 +31,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".MainActivity" />
         <activity android:name=".EmergencyServices" />
         <activity android:name=".InishaPage" />
@@ -94,9 +92,12 @@
             android:enabled="true"
             android:exported="true">
             <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
+
+        <activity android:name=".change_fname"
+                  android:parentActivityName=".ViewProfileActivity" ></activity>
     </application>
 
 </manifest>

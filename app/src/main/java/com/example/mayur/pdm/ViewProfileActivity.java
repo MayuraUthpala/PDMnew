@@ -82,6 +82,14 @@ public class ViewProfileActivity extends AppCompatActivity {
             }
         });
 
+        FirstName.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(ViewProfileActivity.this, change_fname.class));
+                finish();
+            }
+        });
+
         changePW.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
