@@ -105,7 +105,7 @@ public class ViewProfileActivity extends AppCompatActivity {
                 finish();
             }
         });
-        
+
         Mobile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
