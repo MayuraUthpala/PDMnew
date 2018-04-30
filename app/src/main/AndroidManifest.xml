@@ -96,8 +96,11 @@
             </intent-filter>
         </service>
 
-        <activity android:name=".change_fname"
-                  android:parentActivityName=".ViewProfileActivity" ></activity>
+        <activity
+            android:name=".change_fname"
+            android:parentActivityName=".ViewProfileActivity" />
+        <activity android:name=".change_lname"
+            android:parentActivityName=".ViewProfileActivity"></activity>
     </application>
 
 </manifest>
