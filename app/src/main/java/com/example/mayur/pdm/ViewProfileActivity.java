@@ -98,6 +98,14 @@ public class ViewProfileActivity extends AppCompatActivity {
             }
         });
 
+        Address.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(ViewProfileActivity.this, change_address.class));
+                finish();
+            }
+        });
+
         changePW.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

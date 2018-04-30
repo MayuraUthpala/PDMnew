@@ -99,7 +99,10 @@
         <activity
             android:name=".change_fname"
             android:parentActivityName=".ViewProfileActivity" />
-        <activity android:name=".change_lname"
+        <activity
+            android:name=".change_lname"
+            android:parentActivityName=".ViewProfileActivity" />
+        <activity android:name=".change_address"
             android:parentActivityName=".ViewProfileActivity"></activity>
     </application>
 
