@@ -105,6 +105,14 @@ public class ViewProfileActivity extends AppCompatActivity {
                 finish();
             }
         });
+        
+        Mobile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(ViewProfileActivity.this, change_phone.class));
+                finish();
+            }
+        });
 
         changePW.setOnClickListener(new View.OnClickListener() {
             @Override

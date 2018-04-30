@@ -102,8 +102,11 @@
         <activity
             android:name=".change_lname"
             android:parentActivityName=".ViewProfileActivity" />
-        <activity android:name=".change_address"
-            android:parentActivityName=".ViewProfileActivity"></activity>
+        <activity
+            android:name=".change_address"
+            android:parentActivityName=".ViewProfileActivity" />
+        <activity android:name=".change_phone"
+                  android:parentActivityName=".ViewProfileActivity"></activity>
     </application>
 
 </manifest>
