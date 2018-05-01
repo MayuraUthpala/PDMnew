@@ -133,6 +133,9 @@ public class MainActivity extends AppCompatActivity {
                             case (R.id.book):
                                 startActivity(new Intent(getApplicationContext(), Book.class));
                                 break;
+                            case (R.id.rating):
+                                startActivity(new Intent(getApplicationContext(), RatingActivity.class));
+                                break;
 
 
                                 //return true;

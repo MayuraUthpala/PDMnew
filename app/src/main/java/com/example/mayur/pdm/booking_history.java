@@ -58,9 +58,11 @@ public class booking_history extends AppCompatActivity {
                     String date = ds.child("Date").getValue(String.class);
                     String stype = ds.child("SecrviceType").getValue(String.class);
                     String vno=ds.child("VehicleNo").getValue(String.class);
+                    String mod=ds.child("Model").getValue(String.class);
                     arrayList.add(date);
                     arrayList.add(stype);
                     arrayList.add(vno);
+                    arrayList.add(mod);
                     adapter.notifyDataSetChanged();
 
 
