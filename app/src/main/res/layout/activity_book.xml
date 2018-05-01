@@ -11,17 +11,18 @@
     android:background="@color/backgroundcolor">
 
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="239dp"
         android:clipToPadding="false"
         android:gravity="center"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:orientation="horizontal">
+
         <android.support.v7.widget.CardView
             android:id="@+id/add_booking"
-            android:clickable="true"
             android:layout_width="160dp"
             android:layout_height="190dp"
-            android:layout_margin="10dp">
+            android:layout_margin="10dp"
+            android:clickable="true">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -63,16 +64,16 @@
 
         <android.support.v7.widget.CardView
             android:id="@+id/add_offer"
-            android:clickable="true"
             android:layout_width="160dp"
             android:layout_height="190dp"
-            android:layout_margin="10dp">
+            android:layout_margin="10dp"
+            android:clickable="true">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="vertical">
 
                 <ImageView
                     android:id="@+id/offersid"
@@ -81,27 +82,86 @@
                     android:background="@drawable/cerclebackgroundpurple"
                     android:padding="10dp"
                     android:src="@drawable/images" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textStyle="bold"
                     android:layout_marginTop="10dp"
-                    android:text="Offers"/>
+                    android:text="Offers"
+                    android:textStyle="bold" />
+
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="10dp"
-                    android:background="@color/cardview_light_background"/>
+                    android:background="@color/cardview_light_background" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Special offers and discounts.."
                     android:padding="5dp"
-                    android:textColor="@color/green"/>
+                    android:text="Special offers and discounts.."
+                    android:textColor="@color/green" />
 
             </LinearLayout>
 
         </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="332dp"
+        android:clipToPadding="false"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/contact"
+            android:layout_width="160dp"
+            android:layout_height="190dp"
+            android:layout_margin="10dp"
+            android:clickable="true">
+
+            <LinearLayout
+                android:id="@+id/cntus"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/cnttus"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:background="@drawable/cerclebackgroundpurple"
+                    android:padding="10dp"
+                    android:src="@drawable/cnt" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Contact us"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/cardview_light_background" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="We are here to help"
+                    android:textColor="@color/green" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
 
     </LinearLayout>
 

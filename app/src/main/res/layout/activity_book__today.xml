@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mayur.pdm.Book_Today">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="Service Type"
+        android:textColor="@color/green"
+        android:textSize="18sp" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="13dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/spinner"
+        android:layout_marginTop="11dp"
+        android:text="Time Slot"
+        android:textColor="@color/green"
+        android:textSize="18sp" />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView3"
+        android:layout_marginTop="13dp" />
+
+    <Button
+        android:id="@+id/btnDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:padding="10dp"
+        android:text="Select a date"
+        android:textColor="@android:color/holo_red_dark" />
+
+    <TextView
+        android:id="@+id/tvSelectedDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnDate"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+
+    <Button
+        android:id="@+id/cont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_toEndOf="@+id/textView5"
+        android:layout_toRightOf="@+id/textView5"
+        android:text="Continue"
+        android:textColor="@android:color/holo_red_dark" />
+
+    <Button
+        android:id="@+id/del"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="23dp"
+        android:layout_marginRight="23dp"
+        android:layout_toLeftOf="@+id/cont"
+        android:layout_toStartOf="@+id/cont"
+        android:text="Delete"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Add"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/del"
+        android:layout_toStartOf="@+id/del"
+        android:text="Update"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tvSelectedDate"
+        android:layout_marginTop="23dp"
+        android:text="Vehicle Reg Number"
+        android:textColor="@color/green"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/add"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="60dp"
+        android:text="Make/Model"
+        android:textColor="@color/green"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/regnum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView5"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/model"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/del"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="12dp"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+
+</RelativeLayout>

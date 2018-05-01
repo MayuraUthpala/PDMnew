@@ -105,6 +105,7 @@ public class ProfileActivity extends AppCompatActivity {
                 userMap.put("fname", fname);
                 userMap.put("lname", lname);
                 userMap.put("phone", numT);
+
                 databaseReference.updateChildren(userMap).addOnCompleteListener(new OnCompleteListener() {
                     @Override
                     public void onComplete(@NonNull Task task) {
