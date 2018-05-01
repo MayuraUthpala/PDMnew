@@ -187,7 +187,7 @@ public class MainActivity extends AppCompatActivity {
             finish();
 
         }else {
-            //   checkUserExist();
+            checkUserExist();
             mEmailTextView.setText(user.getEmail());
             // setDataToView(user);
 
@@ -198,6 +198,25 @@ public class MainActivity extends AppCompatActivity {
     private void signOut() {
         auth.signOut();
 
+    }
+    private void checkUserExist() {
+        final String current_uid=auth.getCurrentUser().getUid();
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                if(!dataSnapshot.hasChild(current_uid))
+                {
+                    startActivity(new Intent(MainActivity.this, ProfileActivity.class));
+                    finish();
+
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
     }
 
     @Override
