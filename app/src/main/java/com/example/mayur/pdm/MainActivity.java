@@ -35,11 +35,17 @@ public class MainActivity extends AppCompatActivity {
     private TextView mNameTextView;
     private TextView mEmailTextView;
     String cid;
+    private NavigationView navigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //current user
+        auth = FirebaseAuth.getInstance();
+        databaseReference=FirebaseDatabase.getInstance().getReference().child("users");
+        cid=auth.getCurrentUser().getUid();
 
         //Navigation menu code
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer);
@@ -50,11 +56,58 @@ public class MainActivity extends AppCompatActivity {
         mToggle.syncState();
         assert getSupportActionBar() != null;
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        NavigationView navigationView = findViewById(R.id.navigation_view);
-        navigationView.setNavigationItemSelectedListener(
-                new NavigationView.OnNavigationItemSelectedListener() {
-                    @Override
-                    public boolean onNavigationItemSelected(MenuItem menuItem) {
+
+        if(cid.equals("VIrVk6FhtPPpBpY5FMBoqgYVNVn1")){
+            mDrawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED, findViewById(R.id.navigation_view));
+            NavigationView navigationViewAdmin = findViewById(R.id.navigation_viewAdmin);
+            navigationViewAdmin.setNavigationItemSelectedListener(
+                    new NavigationView.OnNavigationItemSelectedListener() {
+                        @Override
+                        public boolean onNavigationItemSelected(MenuItem menuItem) {
+
+                            switch (menuItem.getItemId()) {
+                                case (R.id.nav_promMan):
+                                    Intent accountActivity = new Intent(getApplicationContext(), activity_promotion_admin.class);
+                                    startActivity(accountActivity);
+                                    break;
+
+                                case (R.id.Emadchat):
+                                    startActivity(new Intent(getApplicationContext(), EmChat.class));
+                                    break;
+
+                                case (R.id.logout):
+                                    signOut();
+                                    startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                                    break;
+                                //return true;
+
+                            }
+                            // set item as selected to persist highlight
+//                        menuItem.setChecked(true);
+                            // close drawer when item is tapped
+                            mDrawerLayout.closeDrawers();
+
+                            // Add code here to update the UI based on the item selected
+                            // For example, swap UI fragments here
+
+                            return true;
+                        }
+                    });
+
+            View navHeaderView = navigationViewAdmin.getHeaderView(0);
+
+
+            mEmailTextView = (TextView) navHeaderView.findViewById(R.id.textView_email);
+            mNameTextView=(TextView) navHeaderView.findViewById(R.id.textView_name);
+
+        }
+        else {
+            mDrawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED, findViewById(R.id.navigation_viewAdmin));
+            navigationView = findViewById(R.id.navigation_view);
+            navigationView.setNavigationItemSelectedListener(
+                    new NavigationView.OnNavigationItemSelectedListener() {
+                        @Override
+                        public boolean onNavigationItemSelected(MenuItem menuItem) {
 
                         switch (menuItem.getItemId()) {
                             case (R.id.nav_profile):
@@ -84,26 +137,29 @@ public class MainActivity extends AppCompatActivity {
 
                                 //return true;
 
-                        }
-                        // set item as selected to persist highlight
+                            }
+                            // set item as selected to persist highlight
 //                        menuItem.setChecked(true);
-                        // close drawer when item is tapped
-                        mDrawerLayout.closeDrawers();
+                            // close drawer when item is tapped
+                            mDrawerLayout.closeDrawers();
 
-                        // Add code here to update the UI based on the item selected
-                        // For example, swap UI fragments here
+                            // Add code here to update the UI based on the item selected
+                            // For example, swap UI fragments here
 
-                        return true;
-                    }
-                });
+                            return true;
+                        }
+                    });
 
-        View navHeaderView = navigationView.getHeaderView(0);
-        mEmailTextView = (TextView) navHeaderView.findViewById(R.id.textView_email);
-        mNameTextView=(TextView) navHeaderView.findViewById(R.id.textView_name);
+            View navHeaderView = navigationView.getHeaderView(0);
 
-        auth = FirebaseAuth.getInstance();
-        databaseReference=FirebaseDatabase.getInstance().getReference().child("users");
-        cid=auth.getCurrentUser().getUid();
+            mEmailTextView = (TextView) navHeaderView.findViewById(R.id.textView_email);
+            mNameTextView=(TextView) navHeaderView.findViewById(R.id.textView_name);
+        }
+
+
+
+
+
         databaseReference.child(cid).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -131,9 +187,9 @@ public class MainActivity extends AppCompatActivity {
             finish();
 
         }else {
-         //   checkUserExist();
+            //   checkUserExist();
             mEmailTextView.setText(user.getEmail());
-           // setDataToView(user);
+            // setDataToView(user);
 
         }
 

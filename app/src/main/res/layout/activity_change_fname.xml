@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.mayur.pdm.ProfileActivity">
+    tools:context="com.example.mayur.pdm.change_fname">
 
     <include
-        android:id="@+id/prom_admin"
+        android:id="@+id/fname_toolbar"
         layout="@layout/app_bar_layout">
 
     </include>
@@ -22,50 +22,34 @@
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp">
 
-
         <TextView
-            android:layout_width="fill_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:text="Enter promotion text"
+            android:text="Edit your First Name"
             android:textColor="@android:color/black"
-            android:textColorHint="@android:color/darker_gray"
-            android:textSize="20dp"
-            android:textStyle="bold" />
+            android:layout_gravity="left"
+            android:textSize="25dp"/>
 
         <EditText
-            android:id="@+id/promotionadd"
-            android:layout_width="match_parent"
+            android:id="@+id/changeFName"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:focusableInTouchMode="true"
-            android:hint="Enter text"
-            android:lines="5"
-            android:inputType="textCapSentences|textMultiLine"
+            android:layout_marginBottom="10dp"
+            android:hint="Your First Name"
             android:textColor="@android:color/black"
-            android:textColorHint="@android:color/darker_gray" />
-
-
-
+            android:textColorHint="@android:color/darker_gray"/>
 
         <Button
-            android:id="@+id/btn_submitPromotion"
+            android:id="@+id/edit_fname"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dip"
+            android:layout_marginBottom="250dp"
             android:background="@color/nnn"
-            android:text="@string/btn_submit"
-            android:layout_marginBottom="10dp"
+            android:text="Save"
             android:textColor="@android:color/white" />
-
-
-        <ListView
-            android:id="@+id/db_promlist"
-            android:layout_width="364dp"
-            android:layout_height="200dp"
-            android:paddingLeft="@dimen/nav_header_vertical_spacing" />
-
 
     </LinearLayout>
 
-</RelativeLayout>
 
+</RelativeLayout>

@@ -103,6 +103,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "381496230720-q9o7h5eqs30knt9d05ct9u5papm9v6u2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mayur.pdm",
+            "certificate_hash": "045fd7fe618f185b2c6dcc88ea22437afdb7a70b"
+          }
+        },
+        {
           "client_id": "381496230720-iu60tfbj1937942nfemgffj8omig8mij.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

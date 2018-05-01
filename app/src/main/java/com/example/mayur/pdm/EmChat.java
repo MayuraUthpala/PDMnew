@@ -88,7 +88,6 @@ public class EmChat extends AppCompatActivity {
 
                     }
                 });
-
                 mMessageList.scrollToPosition(mMessageList.getAdapter().getItemCount());
                 editMessage.getText().clear();
 

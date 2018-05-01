@@ -24,6 +24,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Splash">
+            <intent-filter>
+                <action android:name="com.example.mayur.pdm.Splash" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".EmergencyServices" />
         <activity android:name=".InishaPage" />
@@ -71,6 +78,35 @@
         <activity android:name=".Contact_us" />
         <activity android:name=".SendingMail" />
         <activity android:name=".Book_Today"></activity>
+        <activity
+            android:name=".activity_promotion_admin"
+            android:parentActivityName=".MainActivity" />
+
+        <service android:name=".MyFirebaseInstanceIdService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".change_fname"
+            android:parentActivityName=".ViewProfileActivity" />
+        <activity
+            android:name=".change_lname"
+            android:parentActivityName=".ViewProfileActivity" />
+        <activity
+            android:name=".change_address"
+            android:parentActivityName=".ViewProfileActivity" />
+        <activity android:name=".change_phone"
+                  android:parentActivityName=".ViewProfileActivity"></activity>
     </application>
 
 </manifest>
