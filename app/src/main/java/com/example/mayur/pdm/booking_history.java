@@ -41,7 +41,7 @@ public class booking_history extends AppCompatActivity {
         mToolbar = (Toolbar) findViewById(R.id.history_toolbar);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setTitle("Service History");
-        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         listView = (ListView) findViewById(R.id.db_booklist);
 
