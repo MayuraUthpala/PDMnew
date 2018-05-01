@@ -118,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
                                 startActivity(new Intent(MainActivity.this, PromotionActivity.class));
                                 return true;
                             case (R.id.service):
-                                startActivity(new Intent(getApplicationContext(), RatingActivity.class));
+                                startActivity(new Intent(getApplicationContext(), booking_history.class));
                                 break;
                             case (R.id.EmSer):
                                 startActivity(new Intent(getApplicationContext(), EmergencyServices.class));

@@ -77,7 +77,7 @@
             android:parentActivityName=".MainActivity" />
         <activity android:name=".Contact_us" />
         <activity android:name=".SendingMail" />
-        <activity android:name=".Book_Today"></activity>
+        <activity android:name=".Book_Today" />
         <activity
             android:name=".activity_promotion_admin"
             android:parentActivityName=".MainActivity" />
@@ -105,8 +105,10 @@
         <activity
             android:name=".change_address"
             android:parentActivityName=".ViewProfileActivity" />
-        <activity android:name=".change_phone"
-                  android:parentActivityName=".ViewProfileActivity"></activity>
+        <activity
+            android:name=".change_phone"
+            android:parentActivityName=".ViewProfileActivity" />
+        <activity android:name=".booking_history"></activity>
     </application>
 
 </manifest>
