@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../../../acer/PDMnew/PDM.iml" filepath="$PROJECT_DIR$/../../../acer/PDMnew/PDM.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PDM.iml" filepath="$PROJECT_DIR$/PDM.iml" />
+      <module fileurl="file://C:/acer/PDMnew/PDM.iml" filepath="C:/acer/PDMnew/PDM.iml" />
       <module fileurl="file://$PROJECT_DIR$/PDMnew.iml" filepath="$PROJECT_DIR$/PDMnew.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/appL/appL.iml" filepath="$PROJECT_DIR$/appL/appL.iml" />

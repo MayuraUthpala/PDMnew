@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/EmSer" android:title="Emergency Service" />
-    <item android:id="@+id/Dul" android:title="Dulip" />
+    <item android:id="@+id/Dul" android:title="Maintenance" />
     <item android:id="@+id/book" android:title="Booking"/>
-    <item android:id="@+id/Upa" android:title="Upadya" />
+    <item android:id="@+id/Upasp" android:title="Spare Parts"  android:icon="@drawable/ic_build_black_24dp"/>/>
     <item android:id="@+id/faqs" android:title="FAQs" />
     <item android:id="@+id/nav_profile"
         android:title="My Profile" android:icon="@mipmap/ic_perm_identity_black_24dp"/>

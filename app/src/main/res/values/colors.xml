@@ -23,7 +23,25 @@
     <color name="btn_logut_bg">#ff6861</color>
     <color name="borderColor">#000000 </color>
 
-
+<!-- Dulip -->
+    <color name="colorPrimar">#16235A</color>
+    <color name="colorPrimaryDar">#2A3457</color>
+    <color name="colorAccen">#720017</color>
+    <color name="s">#192E5B</color>
+    <color name="sk">#1D65A6</color>
+    <color name="sky">#16235A</color>
+    <color name="skyb">#2A3457</color>
+    <color name="skybl">#2E303E</color>
+    <color name="skyblu">#6C6B74</color>
+    <color name="nil">#182657</color>
+    <color name="nilla">#121F40</color>
+    <color name="n">#132226</color>
+    <color name="ni">#196761</color>
+    <color name="blu">#00897B</color>
+    <color name="bl">#00796B</color>
+    <color name="nik">#123F3C</color>
+    <color name="nia">#12312E</color>
+    <color name="nn1n">#155C56</color>
 
     <color name="backgroundcolor">#fcfcfc</color>
     <color name="lightgray">#ededed</color>
@@ -32,6 +50,9 @@
     <color name="green">#00bfa5</color>
     <color name="skyblue">#87cefa</color>
     <color name="bloue">#000080</color>
+
+    <color name="redText">#d32f2f</color>
+    <color name="greenText">#4caf50</color>
 
 
 </resources>

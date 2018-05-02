@@ -53,4 +53,14 @@
     <string name="close">Close</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_em_map">Map</string>
+    <string name="title_activity_spare_parts_admin">Spare Parts Admin Activity</string>
+
+
+    <string-array name="sp_manufacturer_array">
+        <item>Toyota</item>
+        <item>Mazda</item>
+        <item>Honda</item>
+        <item>BMW</item>
+        <item>Benz</item>
+    </string-array>
 </resources>
