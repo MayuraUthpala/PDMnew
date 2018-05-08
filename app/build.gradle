@@ -43,8 +43,8 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 
-    compile 'com.firebase:firebase-client-android:2.5.2'
-    compile 'com.github.PhilJay:MPAndroidChart:v2.0.9'
+    implementation 'com.firebase:firebase-client-android:2.5.2'
+    implementation 'com.github.PhilJay:MPAndroidChart:v2.0.9'
 
 }
 apply plugin: 'com.google.gms.google-services'
