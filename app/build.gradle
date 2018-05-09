@@ -19,6 +19,9 @@ android {
     }
 }
 
+repositories {
+    maven { url "https://jitpack.io" }
+}
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     //noinspection GradleCompatible
@@ -36,7 +39,12 @@ dependencies {
     implementation 'com.google.firebase:firebase-messaging:11.0.4'
     testImplementation 'junit:junit:4.12'
     implementation 'com.ms-square:expandableTextView:0.1.4'
+    implementation 'com.github.PhilJay:MPAndroidChart:v2.0.9'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+    implementation 'com.firebase:firebase-client-android:2.5.2'
+    implementation 'com.github.PhilJay:MPAndroidChart:v2.0.9'
+
 }
 apply plugin: 'com.google.gms.google-services'

@@ -11,6 +11,7 @@
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
 
     <application
+        android:name=".Firefuel"
         android:allowBackup="true"
         android:icon="@drawable/logo"
         android:label="@string/app_name"
@@ -56,6 +57,21 @@
         <activity
             android:name=".ChangePassword"
             android:parentActivityName=".ViewProfileActivity" />
+        <activity android:name=".Maintain" />
+        <activity android:name=".ItemIn" />
+        <activity android:name=".Stat" />
+        <activity android:name=".Reminder"/>
+        <activity android:name=".Fueldul"/>
+        <activity android:name=".Fuel"/>
+        <activity
+            android:name=".SpareParts.views.SparePartsActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".SpareParts.views.SparePartsAdminActivity"
+            android:label="@string/title_activity_spare_parts_admin"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".SpareParts.views.SPAddActivity"></activity>
+
 
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.

@@ -66,8 +66,10 @@ public class EmChat extends AppCompatActivity {
     }
 
         public void sendButtonClicked(View view){
+            mMessageList = (RecyclerView)findViewById(R.id.messageRec);
             mCurrentUser = mAuth.getCurrentUser();
             mDatabaseUsers = FirebaseDatabase.getInstance().getReference().child("users").child(mCurrentUser.getUid());
+            mMessageList.smoothScrollToPosition(mMessageList.getAdapter().getItemCount()-1);
         final String messageValue = editMessage.getText().toString().trim();
             if (!TextUtils.isEmpty(messageValue)){
                 final DatabaseReference newPost = mDatebase.push();
@@ -88,7 +90,7 @@ public class EmChat extends AppCompatActivity {
 
                     }
                 });
-                mMessageList.scrollToPosition(mMessageList.getAdapter().getItemCount());
+
                 editMessage.getText().clear();
 
             }
