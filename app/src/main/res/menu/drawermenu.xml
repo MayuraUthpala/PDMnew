@@ -5,9 +5,12 @@
     <item android:id="@+id/book" android:title="Booking"/>
     <item android:id="@+id/Upasp" android:title="Spare Parts"  android:icon="@drawable/ic_build_black_24dp"/>/>
     <item android:id="@+id/faqs" android:title="FAQs" />
+
     <item android:id="@+id/nav_profile"
         android:title="My Profile" android:icon="@mipmap/ic_perm_identity_black_24dp"/>
-    <item android:id="@+id/rating" android:title="Rating" />
+
+    <item android:id="@+id/rating" android:title="Rating"
+        android:icon="@mipmap/ic_grade_black_24dp"/>
 
     <item android:id="@+id/promotion"
         android:title="Promotions" android:icon="@mipmap/ic_list_black_24dp"/>
