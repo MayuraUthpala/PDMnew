@@ -123,8 +123,10 @@
         <activity
             android:name=".booking_history"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".bhistory"
+        <activity
+            android:name=".bhistory"
             android:parentActivityName=".MainActivity" />
+        <activity android:name=".admin_rating"></activity>
     </application>
 
 </manifest>

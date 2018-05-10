@@ -14,6 +14,9 @@
         android:icon="@drawable/ic_build_black_24dp"
         android:title="Spare Parts Manager" />
     <item
+        android:id="@+id/RatingAdmin"
+        android:title="Rating Viewer" />
+    <item
         android:id="@+id/logout"
         android:icon="@mipmap/ic_exit_to_app_black_24dp"
         android:title="Logout" />

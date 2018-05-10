@@ -71,6 +71,9 @@ public class MainActivity extends AppCompatActivity {
                                 case (R.id.Emadchat):
                                     startActivity(new Intent(getApplicationContext(), EmChat.class));
                                     break;
+                                case (R.id.RatingAdmin):
+                                    startActivity(new Intent(getApplicationContext(), admin_rating.class));
+                                    break;
 
                                 case (R.id.SparePartAdmin):
                                     startActivity(new Intent(getApplicationContext(), SparePartsAdminActivity.class));
