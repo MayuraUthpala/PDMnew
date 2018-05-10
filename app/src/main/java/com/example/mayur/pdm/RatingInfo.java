@@ -6,14 +6,13 @@ package com.example.mayur.pdm;
 
 public class RatingInfo {
     public String feedback;
-    public Float rating;
+    public Long rating;
     //timestamp, customer
 
     public RatingInfo(){
-
     }
 
-    public RatingInfo(String feedback, Float rating) {
+    public RatingInfo(String feedback, Long rating) {
         this.feedback = feedback;
         this.rating = rating;
     }
