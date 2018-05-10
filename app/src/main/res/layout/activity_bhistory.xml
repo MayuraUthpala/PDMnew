@@ -12,12 +12,16 @@
 
     </include>
 
-   <android.support.v7.widget.RecyclerView
-       android:layout_width="match_parent"
-       android:layout_height="match_parent"
-       android:id="@+id/myrec">
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/myrec"
+        android:layout_width="match_parent"
+        android:layout_height="491dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="66dp"
+        android:layout_alignParentLeft="true">
 
-   </android.support.v7.widget.RecyclerView>
+    </android.support.v7.widget.RecyclerView>
 
 </RelativeLayout>
 

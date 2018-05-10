@@ -5,31 +5,21 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
-import com.google.firebase.database.ValueEventListener;
-
-import java.util.ArrayList;
 import android.support.v7.widget.RecyclerView;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
+
 
 public class bhistory extends AppCompatActivity {
 
     private RecyclerView hisList;
     private FirebaseDatabase database;
     private DatabaseReference ref;
-    private ArrayList<String> arrayList = new ArrayList<>();
-    private ArrayAdapter<String> adapter;
+
     private Toolbar mToolbar;
     private FirebaseAuth auth;
 
@@ -49,7 +39,7 @@ public class bhistory extends AppCompatActivity {
         mToolbar = (Toolbar) findViewById(R.id.history_toolbar);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setTitle("Service History");
-        // getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         hisList=(RecyclerView)findViewById(R.id.myrec);
         hisList.setHasFixedSize(true);
@@ -70,6 +60,7 @@ public class bhistory extends AppCompatActivity {
                 viewHolder.setModel(model.getModel());
                 viewHolder.setReg(model.getVehicleNo());
                 viewHolder.setType(model.getSecrviceType());
+                viewHolder.setRating(model.getRating());
 
             }
         };
@@ -98,6 +89,16 @@ public class bhistory extends AppCompatActivity {
         public void setModel(String model){
             TextView cmodel=(TextView)mview.findViewById(R.id.displayModel);
             cmodel.setText(model);
+        }
+
+        public void setRating(Long rating){
+            TextView crating=(TextView)mview.findViewById(R.id.disRating);
+            if(rating==null) {
+                crating.setText("Not rated");
+            }
+            else{
+                crating.setText(String.valueOf(rating));
+            }
         }
 
 

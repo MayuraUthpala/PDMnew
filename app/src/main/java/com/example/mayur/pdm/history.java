@@ -5,12 +5,22 @@ public class history {
     private String Model;
     private String SecrviceType;
     private String VehicleNo;
+    private Long rating;
 
-    public history(String date, String model, String secrviceType, String vehicleNo) {
+    public history(String date, String model, String secrviceType, String vehicleNo, Long rating) {
         Date = date;
         Model = model;
         SecrviceType = secrviceType;
         VehicleNo = vehicleNo;
+        this.rating = rating;
+    }
+
+    public Long getRating() {
+        return rating;
+    }
+
+    public void setRating(Long rating) {
+        this.rating = rating;
     }
 
     public history(){

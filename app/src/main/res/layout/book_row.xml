@@ -12,7 +12,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="240dp">
+        android:layout_height="match_parent">
 
         <TextView
             android:id="@+id/one"
@@ -34,21 +34,21 @@
             android:id="@+id/displayDate"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/displayType"
             android:layout_alignParentTop="true"
             android:layout_alignStart="@+id/displayType"
             android:text="Date"
-            android:textSize="20dp"
-            android:layout_alignLeft="@+id/displayType" />
+            android:textSize="20dp" />
 
         <TextView
             android:id="@+id/displayType"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/displayReg"
             android:layout_alignStart="@+id/displayReg"
             android:layout_below="@+id/one"
             android:text="ST"
-            android:textSize="20dp"
-            android:layout_alignLeft="@+id/displayReg" />
+            android:textSize="20dp" />
 
         <TextView
             android:id="@+id/three"
@@ -63,12 +63,12 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/two"
+            android:layout_marginLeft="13dp"
             android:layout_marginStart="13dp"
             android:layout_toEndOf="@+id/one"
-            android:text="Reg"
-            android:textSize="20dp"
             android:layout_toRightOf="@+id/one"
-            android:layout_marginLeft="13dp" />
+            android:text="Reg"
+            android:textSize="20dp" />
 
         <TextView
             android:id="@+id/four"
@@ -79,14 +79,32 @@
             android:textSize="20dp" />
 
         <TextView
+            android:id="@+id/five"
+            android:layout_width="123dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/four"
+            android:text="Rating"
+            android:textSize="20dp" />
+
+        <TextView
             android:id="@+id/displayModel"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/displayDate"
             android:layout_alignStart="@+id/displayDate"
             android:layout_below="@+id/displayReg"
             android:text="Model"
-            android:textSize="20dp"
-            android:layout_alignLeft="@+id/displayDate" />
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/disRating"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/displayDate"
+            android:layout_alignStart="@+id/displayDate"
+            android:layout_below="@+id/displayModel"
+            android:text="Rating"
+            android:textSize="20dp" />
 
     </RelativeLayout>
 
