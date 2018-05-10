@@ -122,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
                                 startActivity(new Intent(getApplicationContext(), Fueldul.class));
                                 return true;
                             case (R.id.service):
-                                startActivity(new Intent(getApplicationContext(), booking_history.class));
+                                startActivity(new Intent(getApplicationContext(), bhistory.class));
                                 break;
                             case (R.id.Upasp):
                                 startActivity(new Intent(getApplicationContext(), SparePartsActivity.class));

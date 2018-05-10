@@ -60,9 +60,9 @@
         <activity android:name=".Maintain" />
         <activity android:name=".ItemIn" />
         <activity android:name=".Stat" />
-        <activity android:name=".Reminder"/>
-        <activity android:name=".Fueldul"/>
-        <activity android:name=".Fuel"/>
+        <activity android:name=".Reminder" />
+        <activity android:name=".Fueldul" />
+        <activity android:name=".Fuel" />
         <activity
             android:name=".SpareParts.views.SparePartsActivity"
             android:parentActivityName=".MainActivity" />
@@ -70,8 +70,7 @@
             android:name=".SpareParts.views.SparePartsAdminActivity"
             android:label="@string/title_activity_spare_parts_admin"
             android:theme="@style/AppTheme" />
-        <activity android:name=".SpareParts.views.SPAddActivity"></activity>
-
+        <activity android:name=".SpareParts.views.SPAddActivity" />
 
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -94,6 +93,7 @@
         <activity android:name=".Contact_us" />
         <activity android:name=".SendingMail" />
         <activity android:name=".Book_Today" />
+
         <service android:name=".MyFirebaseInstanceIdService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
@@ -120,8 +120,10 @@
         <activity
             android:name=".change_phone"
             android:parentActivityName=".ViewProfileActivity" />
-        <activity android:name=".booking_history"
-                  android:parentActivityName=".MainActivity"></activity>
+        <activity
+            android:name=".booking_history"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".bhistory"></activity>
     </application>
 
 </manifest>
