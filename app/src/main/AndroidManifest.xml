@@ -42,7 +42,8 @@
         <activity android:name=".FAQs" />
         <activity android:name=".EmHelp" />
         <activity android:name=".EmChat" />
-        <activity android:name=".RatingActivity" />
+        <activity android:name=".RatingActivity"
+            android:parentActivityName=".MainActivity"/>
         <activity android:name=".Book" />
         <activity android:name=".Offers" />
         <activity android:name=".Payment_gateway" />
@@ -127,7 +128,8 @@
         <activity
             android:name=".bhistory"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".admin_rating"></activity>
+        <activity android:name=".admin_rating"
+            android:parentActivityName=".MainActivity"></activity>
     </application>
 
 </manifest>
