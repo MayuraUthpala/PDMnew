@@ -113,25 +113,30 @@ public class RatingActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                String feed=Feedback.getText().toString().trim();
-                Float num=RatingBar.getRating();
-                HashMap userMap = new HashMap();
-                userMap.put("feedback", feed);
-                userMap.put("rating",num);
-                databaseReference.updateChildren(userMap).addOnCompleteListener(new OnCompleteListener() {
-                    @Override
-                    public void onComplete(@NonNull Task task) {
-                        if (task.isSuccessful()) {
-                            Toast.makeText(getApplicationContext(), "Thank you for sharing your feedback", Toast.LENGTH_LONG).show();
-                            startActivity(new Intent(RatingActivity.this, MainActivity.class));
-                            finish();
-                        } else {
-                            String message = task.getException().getMessage();
-                            Toast.makeText(RatingActivity.this, "Error occurred!" + message, Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });
+                if (databaseReference==null) {
+                    Toast.makeText(RatingActivity.this, "No booking to rate", Toast.LENGTH_SHORT).show();
+                } else {
 
+                    String feed = Feedback.getText().toString().trim();
+                    Float num = RatingBar.getRating();
+                    HashMap userMap = new HashMap();
+                    userMap.put("feedback", feed);
+                    userMap.put("rating", num);
+                    databaseReference.updateChildren(userMap).addOnCompleteListener(new OnCompleteListener() {
+                        @Override
+                        public void onComplete(@NonNull Task task) {
+                            if (task.isSuccessful()) {
+                                Toast.makeText(getApplicationContext(), "Thank you for sharing your feedback", Toast.LENGTH_LONG).show();
+                                startActivity(new Intent(RatingActivity.this, MainActivity.class));
+                                finish();
+                            } else {
+                                String message = task.getException().getMessage();
+                                Toast.makeText(RatingActivity.this, "Error occurred!" + message, Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
+
+                }
             }
         });
 
