@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/fac_main"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical"
     android:paddingBottom="16dp"
     android:paddingTop="16dp"
@@ -13,6 +12,175 @@
     android:paddingRight="16dp"
     tools:context="com.example.mayur.pdm.FAQs">
 
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="10dp">
+
+        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical"
+            tools:context="com.example.lenovo.maintannce.vehicle_maintanance">
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:context="com.example.lenovo.maintannce.vehicle_maintanance">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="1. What is this application?"
+                    android:textColor="@color/black"
+                    android:textSize="3mm"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="This is a automobile application based on our service stations in Colombo and Malabe."
+                    android:textSize="2.5mm" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="2. Is this free application?"
+                    android:textColor="@color/black"
+                    android:textSize="3mm"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Yes, This application based works are all free(without deals)."
+                    android:textSize="2.5mm" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="3. Am I need wide knowledge about the mobile application handling?"
+                    android:textColor="@color/black"
+                    android:textSize="3mm"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Yes, You need some knowledge about use of mobile."
+                    android:textSize="2.5mm" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="4. Am I need wide knowledge about the hardware?"
+                    android:textColor="@color/black"
+                    android:textSize="3mm"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="No, You dont need much more knowledge about the vehicle to use this application."
+                    android:textSize="2.5mm" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="5. Am I nee to ON my mobile data connection?"
+                    android:textColor="@color/black"
+                    android:textSize="3mm"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Unfortunately Yes, This application based on online services."
+                    android:textSize="2.5mm" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="6.Without Internet is this application work? "
+                    android:textColor="@color/black"
+                    android:textSize="3mm"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Yes, But not all services happen."
+                    android:textSize="2.5mm" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="7. Can I trust this application?"
+                    android:textColor="@color/black"
+                    android:textSize="3mm"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Yes, Our company guarantee for this application and our services also"
+                    android:textSize="2.5mm" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="8. My personal data!!! Are they safe? "
+                    android:textColor="@color/black"
+                    android:textSize="3mm"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Yes, Your all data secure and safe with us."
+                    android:textSize="2.5mm" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="9. If I have 2 or more vehicle? "
+                    android:textColor="@color/black"
+                    android:textSize="3mm"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Yes, this application comfortable with that."
+                    android:textSize="2.5mm" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="10. IF i cant manage this application what i do?"
+                    android:textColor="@color/black"
+                    android:textSize="3mm"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="You can contact us with emergency caller line"
+                    android:textSize="2.5mm" />
+
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+    </android.support.v4.widget.NestedScrollView>
 
 
 </LinearLayout>
