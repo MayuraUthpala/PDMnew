@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
 
     android:paddingBottom="16dp"
-    android:background="@drawable/emergencybck"
+
     tools:context="com.example.mayur.pdm.EmHelp">
 
     <include
@@ -16,32 +16,32 @@
     <Button
 
         android:id="@+id/call1"
-        android:layout_width="206dp"
-        android:layout_height="wrap_content"
+        android:layout_width="295dp"
+        android:layout_height="73dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="128dp"
+        android:layout_marginTop="103dp"
         android:text="CALL 119"
         android:textColor="@color/Red"
         android:textStyle="bold" />
 
     <Button
         android:id="@+id/call2"
-        android:layout_width="205dp"
-        android:layout_height="wrap_content"
+        android:layout_width="295dp"
+        android:layout_height="73dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="230dp"
+        android:layout_marginTop="208dp"
         android:text="CALL Our Center"
         android:textStyle="bold" />
 
     <Button
         android:id="@+id/SMS"
-        android:layout_width="207dp"
+        android:layout_width="181dp"
         android:layout_height="123dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="59dp"
+        android:layout_marginBottom="102dp"
         android:text="SMS"
         android:textColor="@color/redText" />
 

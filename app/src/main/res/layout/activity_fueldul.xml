@@ -5,151 +5,172 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/nik"
-    android:weightSum="10"
+    android:background="@color/white"
     tools:context="com.example.mayur.pdm.Fueldul">
 
-    <RelativeLayout
-        android:layout_weight="1"
+    <include
+        android:id="@+id/tbr_fuel_menu"
+        layout="@layout/app_bar_layout">
+
+    </include>
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp">
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:clipToPadding="false"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="50dp">
 
-
-    </RelativeLayout>
-
-    <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="8"
-        android:alignmentMode="alignMargins"
-        android:columnCount="2"
-        android:columnOrderPreserved="false"
-        android:padding="14dp"
-        android:rowCount="2">
-
-        <!--row 1-->
-        <!--column 1-->
         <android.support.v7.widget.CardView
             android:id="@+id/f1"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_rowWeight="1"
-            android:backgroundTint="@color/nia"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="8dp">
+            android:layout_width="160dp"
+            android:layout_height="190dp"
+            android:layout_margin="10dp"
+            android:background="@color/colorPrimary"
+            android:clickable="true"
+            app:cardCornerRadius="30dp">
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:layout_margin="0dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:src="@drawable/gass" />
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:background="@drawable/ic_battery_charging_80_black_24dp"
+                    android:padding="10dp" />
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="FUEL"
-                    android:textAlignment="center"
-                    android:textColor="@color/ni"
-                    android:textSize="14sp"
+                    android:layout_marginTop="10dp"
+                    android:text="Call for HELP"
                     android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/cardview_light_background" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Service Call and Msgs"
+                    android:textColor="@color/cardview_shadow_start_color" />
+
+
             </LinearLayout>
-
-
         </android.support.v7.widget.CardView>
 
-        <!--column 2-->
+
         <android.support.v7.widget.CardView
             android:id="@+id/rid"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_rowWeight="1"
-            android:backgroundTint="@color/nia"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="8dp">
+            android:layout_width="160dp"
+            android:layout_height="190dp"
+            android:layout_margin="10dp"
+            android:background="@color/colorPrimary"
+            android:clickable="true"
+            app:cardCornerRadius="30dp">
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:layout_margin="0dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:src="@drawable/rem" />
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:background="@drawable/ic_add_alert_black_24dp"
+                    android:padding="10dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="   REMINDERS"
-                    android:textAlignment="center"
-                    android:textColor="@color/ni"
-                    android:textSize="14sp"
+                    android:layout_marginTop="10dp"
+                    android:text="Your Location"
                     android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/cardview_light_background" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Find Our Stations"
+                    android:textColor="@color/cardview_shadow_start_color" />
+
             </LinearLayout>
-
-
         </android.support.v7.widget.CardView>
 
-        <!--row 1-->
-        <!--column 1-->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:clipToPadding="false"
+        android:gravity="center"
+        android:orientation="horizontal">
+
         <android.support.v7.widget.CardView
             android:id="@+id/mm"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_rowWeight="1"
-            android:backgroundTint="@color/nia"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="8dp">
+            android:layout_width="160dp"
+            android:layout_height="190dp"
+            android:layout_margin="10dp"
+            android:background="@color/colorPrimary"
+            android:clickable="true"
+            app:cardCornerRadius="30dp">
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:layout_margin="0dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:src="@drawable/tip" />
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:background="@drawable/ic_library_books_black_24dp"
+                    android:padding="10dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="MAINTENANCE"
-                    android:textAlignment="center"
-                    android:textColor="@color/ni"
-                    android:textSize="14sp"
+                    android:layout_marginTop="10dp"
+                    android:text="Public Chat"
                     android:textStyle="bold" />
-            </LinearLayout>
 
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/cardview_light_background" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Chat and Get Helps"
+                    android:textColor="@color/cardview_shadow_start_color" />
+
+
+            </LinearLayout>
         </android.support.v7.widget.CardView>
 
-    </GridLayout>
-
+    </LinearLayout>
 
 
 </LinearLayout>
