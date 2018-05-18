@@ -9,7 +9,7 @@
     tools:context="com.example.mayur.pdm.MainActivity">
 
     <LinearLayout
-        android:background="@drawable/bckgrnd"
+        android:background="@drawable/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
