@@ -6,8 +6,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.mayur.pdm.EmergencyServices"
-    android:padding="10dp"
+
     android:background="@drawable/emergencybck">
+
+    <include
+        android:id="@+id/tbr_emer_menu"
+        layout="@layout/app_bar_layout">
+
+    </include>
 
     <LinearLayout
         android:layout_width="match_parent"

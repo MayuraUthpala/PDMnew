@@ -6,6 +6,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.text.format.DateFormat;
 import android.view.View;
@@ -35,11 +36,17 @@ public class EmChat extends AppCompatActivity {
     private  FirebaseAuth.AuthStateListener mAuthListener;
     private FirebaseUser mCurrentUser;
     private DatabaseReference mDatabaseUsers;
+    private Toolbar mToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_em_chat);
+
+        mToolbar = (Toolbar) findViewById(R.id.tbr_msg);
+        setSupportActionBar(mToolbar);
+        getSupportActionBar().setTitle("Public Chat");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         editMessage = findViewById(R.id.editMessageE);
         mDatebase = FirebaseDatabase.getInstance().getReference().child("Messages");

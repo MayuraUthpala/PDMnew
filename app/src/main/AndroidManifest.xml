@@ -22,28 +22,33 @@
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="com.example.mayur.pdm.Splash" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
-        <activity android:name=".EmergencyServices" />
+        <activity
+            android:name=".EmergencyServices"
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".InishaPage" />
         <activity android:name=".DulipPage" />
         <activity android:name=".HamidPage" />
         <activity android:name=".UpadyaPage" />
         <activity android:name=".FAQs" />
-        <activity android:name=".EmHelp" />
-        <activity android:name=".EmChat" />
-        <activity android:name=".RatingActivity"
-            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".EmChat"
+            android:parentActivityName=".EmergencyServices" />
+        <activity
+            android:name=".EmHelp"
+            android:parentActivityName=".EmergencyServices" />
+        <activity
+            android:name=".RatingActivity"
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".Book" />
         <activity android:name=".Offers" />
         <activity android:name=".Payment_gateway" />

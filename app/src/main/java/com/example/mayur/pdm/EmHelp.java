@@ -8,6 +8,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.telephony.SmsManager;
 import android.view.View;
 import android.widget.Button;
@@ -19,11 +20,18 @@ public class EmHelp extends AppCompatActivity implements View.OnClickListener {
     private static Button b1;
     private static Button b2;
     private static Button b3;
+    private Toolbar mtoolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_em_help);
+
+        mtoolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.servicetbr);
+        setSupportActionBar(mtoolbar);
+        getSupportActionBar().setTitle("Emergeny Services");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         b1 = findViewById(R.id.call1);
         b1.setOnClickListener(this);
 
@@ -77,6 +85,7 @@ public class EmHelp extends AppCompatActivity implements View.OnClickListener {
                startActivity(intent);
                SmsManager.getDefault().sendTextMessage(number, null, messageToSend, null, null);
                break;
+
 
        }
 
