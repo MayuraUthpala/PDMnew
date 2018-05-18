@@ -29,7 +29,7 @@ public class EmHelp extends AppCompatActivity implements View.OnClickListener {
 
         mtoolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.servicetbr);
         setSupportActionBar(mtoolbar);
-        getSupportActionBar().setTitle("Emergeny Services");
+        getSupportActionBar().setTitle("Service Helps");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         b1 = findViewById(R.id.call1);

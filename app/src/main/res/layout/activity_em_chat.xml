@@ -7,16 +7,10 @@
     android:background="@drawable/emergencychatbck"
     tools:context="com.example.mayur.pdm.EmChat">
 
-    <include
-        android:id="@+id/tbr_msg"
-        layout="@layout/app_bar_layout">
-
-    </include>
-
     <android.support.v7.widget.RecyclerView
         android:id="@+id/messageRec"
         android:layout_width="match_parent"
-        android:layout_height="461dp"
+        android:layout_height="match_parent"
         android:layout_above="@+id/linearlaychat">
 
     </android.support.v7.widget.RecyclerView>
