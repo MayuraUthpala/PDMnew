@@ -44,6 +44,7 @@ public class activity_promotion_admin extends AppCompatActivity {
         setSupportActionBar(mToolbar);
         getSupportActionBar().setTitle("Promotions");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        mToolbar.setTitleTextColor(getResources().getColor(android.R.color.white));
 
 
         final DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Promotion");

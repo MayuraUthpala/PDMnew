@@ -48,6 +48,8 @@ public class ViewProfileActivity extends AppCompatActivity {
         setSupportActionBar(mToolbar);
         getSupportActionBar().setTitle("User Profile");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        mToolbar.setTitleTextColor(getResources().getColor(android.R.color.white));
+
         FirstName = (TextView) findViewById(R.id.vFirstName);
         LastName=(TextView) findViewById(R.id.vLastName);
         Address=(TextView) findViewById(R.id.vAddress);

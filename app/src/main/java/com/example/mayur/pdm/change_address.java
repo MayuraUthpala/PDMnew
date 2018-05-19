@@ -40,6 +40,8 @@ public class change_address extends AppCompatActivity {
         setSupportActionBar(mToolbar);
         getSupportActionBar().setTitle("User Address");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        mToolbar.setTitleTextColor(getResources().getColor(android.R.color.white));
+
         Address = (EditText) findViewById(R.id.changeAddress);
         change = (Button) findViewById(R.id.edit_address);
 

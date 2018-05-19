@@ -46,6 +46,7 @@ public class RatingActivity extends AppCompatActivity {
         setSupportActionBar(mToolbar);
         getSupportActionBar().setTitle("Rating");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        mToolbar.setTitleTextColor(getResources().getColor(android.R.color.white));
 
         firebaseAuth= FirebaseAuth.getInstance();
         if(firebaseAuth.getCurrentUser()==null)

@@ -40,6 +40,7 @@ public class bhistory extends AppCompatActivity {
         setSupportActionBar(mToolbar);
         getSupportActionBar().setTitle("Service History");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        mToolbar.setTitleTextColor(getResources().getColor(android.R.color.white));
 
         hisList=(RecyclerView)findViewById(R.id.myrec);
         hisList.setHasFixedSize(true);

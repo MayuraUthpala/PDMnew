@@ -42,6 +42,8 @@ public class change_lname extends AppCompatActivity {
         setSupportActionBar(mToolbar);
         getSupportActionBar().setTitle("User Last Name");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        mToolbar.setTitleTextColor(getResources().getColor(android.R.color.white));
+
         LastName = (EditText) findViewById(R.id.changeLName);
         change = (Button) findViewById(R.id.edit_lname);
 
