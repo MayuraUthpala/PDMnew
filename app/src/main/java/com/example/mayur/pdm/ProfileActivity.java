@@ -130,7 +130,7 @@ public class ProfileActivity extends AppCompatActivity {
 
             /*ProfileInformation profileInformation = new ProfileInformation(fname, lname, add, num);
             FirebaseUser user = firebaseAuth.getCurrentUser();
-            databaseReference.child(user.getUid()).setValue(profileInformation);
+            databaseReference.child(user.getUserId()).setValue(profileInformation);
             Toast.makeText(getApplicationContext(), "Saved!", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(ProfileActivity.this, MainActivity.class);
             startActivity(intent);

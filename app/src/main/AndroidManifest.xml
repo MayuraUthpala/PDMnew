@@ -63,7 +63,7 @@
              Note that the API key is linked to the encryption key used to sign the APK.
              You need a different API key for each encryption key, including the release key that is used to
              sign the APK for publishing.
-             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -77,10 +77,7 @@
             android:parentActivityName=".MainActivity" />
         <activity android:name=".Contact_us" />
         <activity android:name=".SendingMail" />
-        <activity android:name=".Book_Today"></activity>
-        <activity
-            android:name=".activity_promotion_admin"
-            android:parentActivityName=".MainActivity" />
+        <activity android:name=".Book_Today" />
 
         <service android:name=".MyFirebaseInstanceIdService">
             <intent-filter>
@@ -105,8 +102,16 @@
         <activity
             android:name=".change_address"
             android:parentActivityName=".ViewProfileActivity" />
-        <activity android:name=".change_phone"
-                  android:parentActivityName=".ViewProfileActivity"></activity>
+        <activity
+            android:name=".change_phone"
+            android:parentActivityName=".ViewProfileActivity" />
+        <activity android:name=".RetrieveBooking" />
+        <activity android:name=".AdminBooking" />
+        <activity android:name=".SendingPushNotifications" />
+        <activity android:name=".ServiceAdding" />
+        <activity android:name=".uviewoffers" />
+        <activity android:name=".SelectServiceU" />
+        <activity android:name=".bookingServiceU" />
     </application>
 
 </manifest>

@@ -7,4 +7,7 @@
         android:title="Admin Message" android:icon="@mipmap/ic_perm_identity_black_24dp"/>
     <item android:id="@+id/logout"
         android:title="Logout" android:icon="@mipmap/ic_exit_to_app_black_24dp"/>
+    <item android:title="Bookings" android:id="@+id/bookings"/>
+    <item android:title="Offers" android:id="@+id/noti"/>
+    <item android:title="Services" android:id="@+id/adse"/>
 </menu>

@@ -17,8 +17,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.Calendar;
 import java.util.HashMap;
@@ -59,6 +62,7 @@ public class Book_Today extends AppCompatActivity {
         spinner_e=(Spinner)findViewById(R.id.spinner2);
         arrayAdapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,times);
         spinner_e.setAdapter(arrayAdapter);
+
         cont=(Button)findViewById(R.id.cont);
 
         cont.setOnClickListener(new View.OnClickListener() {
@@ -78,11 +82,13 @@ public class Book_Today extends AppCompatActivity {
                     return;
                 }
 
+
                 final String servtype=spinner_d.getSelectedItem().toString();
                 final String tslot=spinner_e.getSelectedItem().toString();
                 final String dates=date.getText().toString();
                 auth = FirebaseAuth.getInstance();
                 cid=auth.getCurrentUser().getUid();
+
                 final DatabaseReference ref = FirebaseDatabase.getInstance().getReference("booking");
                 HashMap userMap = new HashMap();
                 userMap.put("UserId",cid);
@@ -130,4 +136,6 @@ public class Book_Today extends AppCompatActivity {
         startActivity(intent);
 
     }
+
+
 }
