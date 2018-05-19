@@ -1,17 +1,17 @@
 package com.example.mayur.pdm;
 
-import android.*;
 import android.Manifest;
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
+import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.telephony.SmsManager;
 import android.view.View;
-import android.widget.*;
+import android.widget.Button;
 
 
 public class EmHelp extends AppCompatActivity implements View.OnClickListener {
@@ -19,16 +19,27 @@ public class EmHelp extends AppCompatActivity implements View.OnClickListener {
     private static final int MY_REQUEST_INT = 1;
     private static Button b1;
     private static Button b2;
+    private static Button b3;
+    private Toolbar mtoolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_em_help);
-        b1 = (Button) findViewById(R.id.call1);
+
+        mtoolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.servicetbr);
+        setSupportActionBar(mtoolbar);
+        getSupportActionBar().setTitle("Service Helps");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        b1 = findViewById(R.id.call1);
         b1.setOnClickListener(this);
 
-        b2 = (Button) findViewById(R.id.call2);
+        b2 = findViewById(R.id.call2);
         b2.setOnClickListener(this);
+
+        b3 = findViewById(R.id.SMS);
+        b3.setOnClickListener(this);
     }
 
 
@@ -63,6 +74,18 @@ public class EmHelp extends AppCompatActivity implements View.OnClickListener {
                    startActivity(callIntent1);}
 
                    break;
+
+           case R.id.SMS:
+               String messageToSend = "Im in an Emergency!!! Contact me!!!";
+               String number = "0756628007";
+
+               Uri uri = Uri.parse("smsto:" + number);
+               Intent intent = new Intent(Intent.ACTION_SENDTO, uri);
+               intent.putExtra("sms_body", messageToSend);
+               startActivity(intent);
+               SmsManager.getDefault().sendTextMessage(number, null, messageToSend, null, null);
+               break;
+
 
        }
 

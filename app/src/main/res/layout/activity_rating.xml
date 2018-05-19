@@ -6,6 +6,12 @@
     android:layout_height="match_parent"
     tools:context="com.example.mayur.pdm.RatingActivity">
 
+    <include
+        android:id="@+id/rate_bar"
+        layout="@layout/app_bar_layout">
+
+    </include>
+
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"

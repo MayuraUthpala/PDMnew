@@ -94,7 +94,7 @@ public class ProfileActivity extends AppCompatActivity {
             Toast.makeText(ProfileActivity.this, "Enter Phone number!", Toast.LENGTH_SHORT).show();
         }
         if (num.length() !=9 ) {
-            Toast.makeText(getApplicationContext(), "Incorrect Phone number length!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Incorrect Phone number length! Enter 9 digits", Toast.LENGTH_SHORT).show();
             return;
         }
         if (!num.isEmpty()){
@@ -110,8 +110,9 @@ public class ProfileActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task task) {
                         if (task.isSuccessful()) {
-                            Toast.makeText(getApplicationContext(), "Saved successfully!", Toast.LENGTH_LONG).show();
-                            startActivity(new Intent(ProfileActivity.this, MainActivity.class));
+                            Toast.makeText(getApplicationContext(), "Saved successfully! Please sign in", Toast.LENGTH_LONG).show();
+                            firebaseAuth.signOut();
+                            startActivity(new Intent(getApplicationContext(), LoginActivity.class));
                             finish();
                         } else {
                             String message = task.getException().getMessage();

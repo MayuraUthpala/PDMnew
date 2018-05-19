@@ -7,15 +7,22 @@
     android:layout_height="match_parent"
     tools:context="com.example.mayur.pdm.Book"
     android:orientation="vertical"
-    android:padding="10dp"
-    android:background="@color/backgroundcolor">
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/tbr_booking_menu"
+        layout="@layout/app_bar_layout">
+
+    </include>
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="239dp"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
         android:clipToPadding="false"
         android:gravity="center"
+        android:paddingTop="50dp"
         android:orientation="horizontal">
 
         <android.support.v7.widget.CardView
@@ -23,7 +30,8 @@
             android:layout_width="160dp"
             android:layout_height="190dp"
             android:layout_margin="10dp"
-            android:clickable="true">
+            android:clickable="true"
+            app:cardCornerRadius="30dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -35,9 +43,8 @@
                     android:id="@+id/bookid"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:background="@drawable/cerclebackgroundpurple"
-                    android:padding="10dp"
-                    android:src="@drawable/download" />
+                    android:background="@drawable/ic_directions_car_black_24dp"
+                    android:padding="10dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -57,7 +64,7 @@
                     android:gravity="center"
                     android:padding="5dp"
                     android:text="Book a service today.."
-                    android:textColor="@color/green" />
+                    android:textColor="@color/cardview_shadow_start_color" />
 
             </LinearLayout>
 
@@ -68,7 +75,8 @@
             android:layout_width="160dp"
             android:layout_height="190dp"
             android:layout_margin="10dp"
-            android:clickable="true">
+            android:clickable="true"
+            app:cardCornerRadius="30dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -80,9 +88,9 @@
                     android:id="@+id/offersid"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:background="@drawable/cerclebackgroundpurple"
-                    android:padding="10dp"
-                    android:src="@drawable/images" />
+                    android:background="@drawable/ic_local_offer_black_24dp"
+                    android:padding="10dp" />
+                />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -102,7 +110,7 @@
                     android:gravity="center"
                     android:padding="5dp"
                     android:text="Special offers and discounts.."
-                    android:textColor="@color/green" />
+                    android:textColor="@color/cardview_shadow_start_color" />
 
             </LinearLayout>
 
@@ -112,7 +120,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="332dp"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
         android:clipToPadding="false"
         android:gravity="center"
         android:orientation="horizontal">
@@ -122,7 +131,8 @@
             android:layout_width="160dp"
             android:layout_height="190dp"
             android:layout_margin="10dp"
-            android:clickable="true">
+            android:clickable="true"
+            app:cardCornerRadius="30dp">
 
             <LinearLayout
                 android:id="@+id/cntus"
@@ -135,9 +145,9 @@
                     android:id="@+id/cnttus"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:background="@drawable/cerclebackgroundpurple"
-                    android:padding="10dp"
-                    android:src="@drawable/cnt" />
+                    android:background="@drawable/ic_phone_in_talk_black_24dp"
+                    android:padding="10dp" />
+                />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -157,7 +167,7 @@
                     android:gravity="center"
                     android:padding="5dp"
                     android:text="We are here to help"
-                    android:textColor="@color/green" />
+                    android:textColor="@color/cardview_shadow_start_color" />
 
             </LinearLayout>
 

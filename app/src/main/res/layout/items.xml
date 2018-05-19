@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:backgroundTint="@color/ni"
+    app:cardCornerRadius="4dp">
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="6dp"
+        android:background="@color/nik">
+
+             <TextView
+                 android:id="@+id/txtv1"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="Transmission Fluid"
+                 android:textColor="@color/colorAccen"
+                 android:textSize="14sp"
+                 android:textStyle="bold"
+                 android:layout_alignParentTop="true"
+                 />
+        <TextView
+            android:id="@+id/txtv6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(3Mon/3000mi)"
+            android:textColor="@color/colorAccen"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_toRightOf="@+id/txtv1"
+            android:layout_alignParentTop="true"
+            />
+        <TextView
+            android:id="@+id/txtv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Last Checked"
+            android:textColor="@color/bl"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_below="@+id/txtv1"
+            android:layout_marginLeft="15dp" />
+        <TextView
+            android:id="@+id/txtv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/bl"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_below="@+id/txtv1"
+            android:layout_marginLeft="100dp"
+            android:layout_toRightOf="@+id/txtv2" />
+        <TextView
+            android:id="@+id/txtv4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next Check"
+            android:textColor="@color/bl"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_below="@+id/txtv2"
+            android:layout_marginLeft="15dp" />
+        <TextView
+            android:id="@+id/txtv5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/bl"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_below="@+id/txtv3"
+            android:layout_marginLeft="100dp"
+            android:layout_toRightOf="@+id/txtv2" />
+        <TextView
+            android:id="@+id/txtv7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Replace"
+            android:textColor="@color/bl"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_below="@+id/txtv4"
+            android:layout_marginLeft="15dp" />
+        <TextView
+            android:id="@+id/txtv8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/bl"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_below="@+id/txtv5"
+            android:layout_marginLeft="100dp"
+            android:layout_toRightOf="@+id/txtv2" />
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

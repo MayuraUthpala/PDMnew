@@ -3,6 +3,7 @@
     package="com.example.mayur.pdm">
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -11,6 +12,7 @@
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
 
     <application
+        android:name=".Firefuel"
         android:allowBackup="true"
         android:icon="@drawable/logo"
         android:label="@string/app_name"
@@ -20,27 +22,33 @@
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="com.example.mayur.pdm.Splash" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
-        <activity android:name=".EmergencyServices" />
+        <activity
+            android:name=".EmergencyServices"
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".InishaPage" />
         <activity android:name=".DulipPage" />
         <activity android:name=".HamidPage" />
         <activity android:name=".UpadyaPage" />
         <activity android:name=".FAQs" />
-        <activity android:name=".EmHelp" />
-        <activity android:name=".EmChat" />
-        <activity android:name=".RatingActivity" />
+        <activity
+            android:name=".EmChat"
+            android:parentActivityName=".EmergencyServices" />
+        <activity
+            android:name=".EmHelp"
+            android:parentActivityName=".EmergencyServices" />
+        <activity
+            android:name=".RatingActivity"
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".Book" />
         <activity android:name=".Offers" />
         <activity android:name=".Payment_gateway" />
@@ -56,6 +64,20 @@
         <activity
             android:name=".ChangePassword"
             android:parentActivityName=".ViewProfileActivity" />
+        <activity android:name=".Maintain" />
+        <activity android:name=".ItemIn" />
+        <activity android:name=".Stat" />
+        <activity android:name=".Reminder" />
+        <activity android:name=".Fueldul" />
+        <activity android:name=".Fuel" />
+        <activity
+            android:name=".SpareParts.views.SparePartsActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".SpareParts.views.SparePartsAdminActivity"
+            android:label="@string/title_activity_spare_parts_admin"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".SpareParts.views.SPAddActivity" />
 
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -112,6 +134,17 @@
         <activity android:name=".uviewoffers" />
         <activity android:name=".SelectServiceU" />
         <activity android:name=".bookingServiceU" />
+        <activity
+            android:name=".change_phone"
+            android:parentActivityName=".ViewProfileActivity" />
+        <activity
+            android:name=".booking_history"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".bhistory"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".admin_rating"
+            android:parentActivityName=".MainActivity"></activity>
     </application>
 
 </manifest>

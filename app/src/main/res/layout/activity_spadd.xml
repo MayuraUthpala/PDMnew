@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.mayur.pdm.SpareParts.views.SPAddActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/spareparts_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/spareparts_tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:title="Spare Parts" />
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/addSpTextBoxLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spareparts_appbar"
+        android:layout_margin="6dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/spaddName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter SparePart Name"
+            android:inputType="textPersonName"
+            android:textSize="15dp" />
+
+        <AutoCompleteTextView
+            android:id="@+id/spAddManufacturer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Manufacturer" />
+
+        <AutoCompleteTextView
+            android:id="@+id/spAddModel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Model" />
+
+        <AutoCompleteTextView
+            android:id="@+id/spAddYear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Year" />
+
+        <AutoCompleteTextView
+            android:id="@+id/spAddCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Category " />
+
+        <AutoCompleteTextView
+            android:id="@+id/spAddSubCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Sub Category" />
+
+
+        <EditText
+            android:id="@+id/spAddDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Description"/>
+
+        <EditText
+            android:id="@+id/spAddQty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="Enter Quantity"/>
+
+        <EditText
+            android:id="@+id/spAddUsage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Usage Status"/>
+
+        <EditText
+            android:id="@+id/spAddPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="Enter Price"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/btnAddspcancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:text="Cancel" />
+
+        <Button
+            android:id="@+id/btnAddspadd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:text="Add" />
+    </LinearLayout>
+
+</RelativeLayout>
