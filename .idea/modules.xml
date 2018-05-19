@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://C:\Users\acer\PDMnew\.idea\PDM.iml" filepath="C:\Users\acer\PDMnew\.idea\PDM.iml" />
-      <module fileurl="file://$PROJECT_DIR$/PDMnew.iml" filepath="$PROJECT_DIR$/PDMnew.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/appL/appL.iml" filepath="$PROJECT_DIR$/appL/appL.iml" />
     </modules>

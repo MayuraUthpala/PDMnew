@@ -55,7 +55,7 @@ public class admin_rating extends AppCompatActivity {
         hisList.setLayoutManager(new LinearLayoutManager(this));
 
         database = FirebaseDatabase.getInstance();
-        ref = database.getReference().child("booking");
+        ref = database.getReference().child("Bookings");
 
         go.setOnClickListener(new View.OnClickListener() {
             @Override

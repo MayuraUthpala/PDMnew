@@ -64,7 +64,7 @@ public class RatingActivity extends AppCompatActivity {
 
         cid = user.getUid();
 
-        final Query query=FirebaseDatabase.getInstance().getReference().child("booking").orderByChild("UserId")
+        final Query query=FirebaseDatabase.getInstance().getReference().child("Bookings").orderByChild("UserId")
                 .equalTo(cid).limitToLast(1);
 
         query.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -72,7 +72,7 @@ public class RatingActivity extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for(DataSnapshot ds : dataSnapshot.getChildren()) {
                     key=ds.getKey();
-                    databaseReference=FirebaseDatabase.getInstance().getReference().child("booking").child(key);
+                    databaseReference=FirebaseDatabase.getInstance().getReference().child("Bookings").child(key);
                 }
             }
 

@@ -46,7 +46,7 @@ public class bhistory extends AppCompatActivity {
         hisList.setLayoutManager(new LinearLayoutManager(this));
 
         database = FirebaseDatabase.getInstance();
-        ref = database.getReference().child("booking");
+        ref = database.getReference().child("Bookings");
     }
 
     @Override
