@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -34,22 +35,25 @@ public class RatingActivity extends AppCompatActivity {
     private DatabaseReference databaseReference;
     private EditText feedback;
     private String cid,key;
-
+    private Toolbar mToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rating);
 
-        firebaseAuth= FirebaseAuth.getInstance();
+        mToolbar=(Toolbar) findViewById(R.id.rate_bar);
+        setSupportActionBar(mToolbar);
+        getSupportActionBar().setTitle("Rating");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        firebaseAuth= FirebaseAuth.getInstance();
         if(firebaseAuth.getCurrentUser()==null)
         {
             finish();
 
         }
 
-       // databaseReference= FirebaseDatabase.getInstance().getReference("history");
         FirebaseUser user=firebaseAuth.getCurrentUser();
 
         final RatingBar RatingBar = (RatingBar) findViewById(R.id.ratingBar);
@@ -69,11 +73,7 @@ public class RatingActivity extends AppCompatActivity {
                 for(DataSnapshot ds : dataSnapshot.getChildren()) {
                     key=ds.getKey();
                     databaseReference=FirebaseDatabase.getInstance().getReference().child("booking").child(key);
-
-                   // Toast.makeText(getApplicationContext(), key, Toast.LENGTH_LONG).show();
-
                 }
-
             }
 
             @Override
@@ -81,7 +81,6 @@ public class RatingActivity extends AppCompatActivity {
 
             }
         });
-       // databaseReference=FirebaseDatabase.getInstance().getReference().child("booking").child(key);
 
         RatingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             @Override
@@ -113,25 +112,35 @@ public class RatingActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                String feed=Feedback.getText().toString().trim();
-                Float num=RatingBar.getRating();
-                HashMap userMap = new HashMap();
-                userMap.put("feedback", feed);
-                userMap.put("rating",num);
-                databaseReference.updateChildren(userMap).addOnCompleteListener(new OnCompleteListener() {
-                    @Override
-                    public void onComplete(@NonNull Task task) {
-                        if (task.isSuccessful()) {
-                            Toast.makeText(getApplicationContext(), "Thank you for sharing your feedback", Toast.LENGTH_LONG).show();
-                            startActivity(new Intent(RatingActivity.this, MainActivity.class));
-                            finish();
-                        } else {
-                            String message = task.getException().getMessage();
-                            Toast.makeText(RatingActivity.this, "Error occurred!" + message, Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });
+                if (databaseReference==null) {
+                    Toast.makeText(RatingActivity.this, "No booking to rate", Toast.LENGTH_SHORT).show();
+                } else {
 
+                    String feed = Feedback.getText().toString().trim();
+                    Float num = RatingBar.getRating();
+                    if(num==0){
+                        Toast.makeText(RatingActivity.this, "Please select rating", Toast.LENGTH_SHORT).show();
+                    }
+                    else {
+                        HashMap userMap = new HashMap();
+                        userMap.put("feedback", feed);
+                        userMap.put("rating", num);
+                        databaseReference.updateChildren(userMap).addOnCompleteListener(new OnCompleteListener() {
+                            @Override
+                            public void onComplete(@NonNull Task task) {
+                                if (task.isSuccessful()) {
+                                    Toast.makeText(getApplicationContext(), "Thank you for sharing your feedback", Toast.LENGTH_LONG).show();
+                                    startActivity(new Intent(RatingActivity.this, MainActivity.class));
+                                    finish();
+                                } else {
+                                    String message = task.getException().getMessage();
+                                    Toast.makeText(RatingActivity.this, "Error occurred!" + message, Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });
+                    }
+
+                }
             }
         });
 

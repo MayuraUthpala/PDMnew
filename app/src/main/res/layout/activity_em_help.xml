@@ -3,47 +3,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp"
-    android:paddingTop="16dp"
+
     android:paddingBottom="16dp"
-    android:background="@drawable/emergencybck"
+
     tools:context="com.example.mayur.pdm.EmHelp">
+
+    <include
+        android:id="@+id/servicetbr"
+        layout="@layout/app_bar_layout"></include>
 
 
     <Button
 
-        android:textColor="@color/Red"
-        android:layout_marginTop="150dp"
         android:id="@+id/call1"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
+        android:layout_width="295dp"
+        android:layout_height="73dp"
         android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="103dp"
         android:text="CALL 119"
-        android:textStyle="bold"
-        />
+        android:textColor="@color/Red"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/call2"
+        android:layout_width="295dp"
+        android:layout_height="73dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="208dp"
         android:text="CALL Our Center"
-        android:textStyle="bold"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/call1"
-        android:layout_marginTop="17dp"
-        />
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/SMS"
-        android:layout_width="200dp"
-        android:layout_height="97dp"
+        android:layout_width="181dp"
+        android:layout_height="123dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="68dp"
+        android:layout_marginBottom="102dp"
         android:text="SMS"
         android:textColor="@color/redText" />
 

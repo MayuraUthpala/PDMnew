@@ -43,7 +43,7 @@ public class admin_rating extends AppCompatActivity {
         mToolbar = (Toolbar) findViewById(R.id.admin_rating_toolbar);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setTitle("Rating History");
-        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         spinner_num=(Spinner)findViewById(R.id.spinner);
         arrayAdapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,stars);

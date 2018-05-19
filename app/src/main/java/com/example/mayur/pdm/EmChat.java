@@ -36,10 +36,12 @@ public class EmChat extends AppCompatActivity {
     private FirebaseUser mCurrentUser;
     private DatabaseReference mDatabaseUsers;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_em_chat);
+
 
         editMessage = findViewById(R.id.editMessageE);
         mDatebase = FirebaseDatabase.getInstance().getReference().child("Messages");
