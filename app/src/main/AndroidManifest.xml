@@ -39,7 +39,10 @@
         <activity android:name=".DulipPage" />
         <activity android:name=".HamidPage" />
         <activity android:name=".UpadyaPage" />
-        <activity android:name=".FAQs" />
+        <activity
+            android:name=".FAQs"
+            android:parentActivityName=".EmergencyServices" />
+        />
         <activity
             android:name=".EmChat"
             android:parentActivityName=".EmergencyServices" />
@@ -134,9 +137,7 @@
         <activity android:name=".uviewoffers" />
         <activity android:name=".SelectServiceU" />
         <activity android:name=".bookingServiceU" />
-        <activity
-            android:name=".change_phone"
-            android:parentActivityName=".ViewProfileActivity" />
+
         <activity
             android:name=".booking_history"
             android:parentActivityName=".MainActivity" />
