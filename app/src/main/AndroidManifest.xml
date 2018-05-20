@@ -41,7 +41,7 @@
         <activity android:name=".UpadyaPage" />
         <activity
             android:name=".FAQs"
-            android:parentActivityName=".EmergencyServices" />
+            android:parentActivityName=".MainActivity" />
         />
         <activity
             android:name=".EmChat"
@@ -52,7 +52,9 @@
         <activity
             android:name=".RatingActivity"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".Book" />
+        <activity
+            android:name=".Book"
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".Offers" />
         <activity android:name=".Payment_gateway" />
         <activity android:name=".SignupActivity" />
@@ -100,7 +102,9 @@
         <activity
             android:name=".activity_promotion_admin"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".Contact_us" />
+        <activity
+            android:name=".Contact_us"
+            android:parentActivityName=".Book" />/>
         <activity android:name=".SendingMail" />
         <activity android:name=".Book_Today" />
 
@@ -136,7 +140,9 @@
         <activity android:name=".ServiceAdding" />
         <activity android:name=".uviewoffers" />
         <activity android:name=".SelectServiceU" />
-        <activity android:name=".bookingServiceU" />
+        <activity
+            android:name=".bookingServiceU"
+            android:parentActivityName=".Book" />/>
 
         <activity
             android:name=".booking_history"
