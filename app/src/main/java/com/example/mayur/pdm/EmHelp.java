@@ -31,6 +31,7 @@ public class EmHelp extends AppCompatActivity implements View.OnClickListener {
         setSupportActionBar(mtoolbar);
         getSupportActionBar().setTitle("Service Helps");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        mtoolbar.setTitleTextColor(getResources().getColor(android.R.color.white));
 
         b1 = findViewById(R.id.call1);
         b1.setOnClickListener(this);

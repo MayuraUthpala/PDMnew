@@ -2,10 +2,10 @@ package com.example.mayur.pdm;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -37,11 +37,18 @@ public class bookingServiceU extends AppCompatActivity {
     String times[]={"8.00-9.00","8.30-9.30","9.00-10.00","9.30-10.30","10.00-11.00","10.30-11.30","11.00-12.00","11.30-12.30","2.00-3.00","2.30-3.30","3.00-4.00"};
     ArrayAdapter<String>arrayAdapter;
     private DatabaseReference ref;
+    private Toolbar mtoolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_booking_service_u);
+
+        mtoolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.tbrServiceU);
+        setSupportActionBar(mtoolbar);
+        getSupportActionBar().setTitle("FAQs");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        mtoolbar.setTitleTextColor(getResources().getColor(android.R.color.white));
 
         getprc=(TextView)findViewById(R.id.getprc);
 
