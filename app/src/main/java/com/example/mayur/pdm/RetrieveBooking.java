@@ -34,7 +34,7 @@ public class RetrieveBooking extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        FirebaseRecyclerAdapter<retbookings,getBookings>FirebaseRecyclerAdapter=new FirebaseRecyclerAdapter<retbookings, getBookings>
+        FirebaseRecyclerAdapter<retbookings,getBookings>FirebaseRecyclerAdapter=new FirebaseRecyclerAdapter <retbookings, getBookings>
                 (retbookings.class,R.layout.viewbookings,getBookings.class,databaseReference) {
             @Override
             protected void populateViewHolder(getBookings viewHolder, retbookings model, int position) {
@@ -65,28 +65,16 @@ public class RetrieveBooking extends AppCompatActivity {
         }
 
         public void setServiceType(String serviceType) {
-            TextView tw2=(TextView)mview.findViewById(R.id.servtp);
-            tw2.setText(serviceType);
-            //ServiceType = serviceType;
+            TextView tww=(TextView)mview.findViewById(R.id.servtp);
+            tww.setText(serviceType);
         }
 
         public void setServiceCharge(String serviceCharge) {
-            TextView tw3=(TextView)mview.findViewById(R.id.vno);
+            TextView tw3=(TextView)mview.findViewById(R.id.cha);
             tw3.setText(serviceCharge);
             //ServiceCharge = serviceCharge;
         }
 
-        public void setModel(String model) {
-            TextView tw4=(TextView)mview.findViewById(R.id.make);
-            tw4.setText(model);
-            //Model = model;
-        }
-
-        public void setVehicleNo(String vehicleNo) {
-            TextView tw5=(TextView)mview.findViewById(R.id.vnm);
-            tw5.setText(vehicleNo);
-            //VehicleNo = vehicleNo;
-        }
 
         public void setDate(String date) {
             TextView tw6=(TextView)mview.findViewById(R.id.bookdate);
@@ -100,5 +88,16 @@ public class RetrieveBooking extends AppCompatActivity {
             //TimeSlot = timeSlot;
         }
 
+        public void setVehicleNo(String vehicleNo) {
+            TextView tw5=(TextView)mview.findViewById(R.id.vnm);
+            tw5.setText(vehicleNo);
+            //VehicleNo = vehicleNo;
+        }
+
+        public void setModel(String model) {
+            TextView tw4=(TextView)mview.findViewById(R.id.make);
+            tw4.setText(model);
+            //Model = model;
+        }
     }
 }

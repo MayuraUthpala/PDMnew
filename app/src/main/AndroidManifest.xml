@@ -22,12 +22,14 @@
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="com.example.mayur.pdm.Splash" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -143,8 +145,16 @@
         <activity
             android:name=".bhistory"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".admin_rating"
-            android:parentActivityName=".MainActivity"></activity>
+        <activity
+            android:name=".admin_rating"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".UIforBooking" />
+        <activity android:name=".LastBookingCancel" />
+        <activity android:name=".PaypalORCredit" />
+        <activity android:name=".PayPal" />
+        <activity android:name=".PaymentDetails" />
+        <activity android:name=".ListOFBookings" />
+        <activity android:name=".CustomerViewBooking"></activity>
     </application>
 
 </manifest>

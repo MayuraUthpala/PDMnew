@@ -35,7 +35,7 @@ private CardView book_card,offers_card,contactus_card;
         Intent i;
 
         switch (v.getId()){
-            case R.id.add_booking:i=new Intent(this,SelectServiceU.class);startActivity(i);break;
+            case R.id.add_booking:i=new Intent(this,UIforBooking.class);startActivity(i);break;
             case R.id.add_offer:i=new Intent(this,uviewoffers.class);startActivity(i);break;
             case R.id.contact:i=new Intent(this,Contact_us.class);startActivity(i);break;
             default:break;

@@ -91,7 +91,7 @@ public class AdminBooking extends AppCompatActivity {
 
             public void setVehicleNo(String vehicleNo) {
 
-                TextView tw4=(TextView)mview.findViewById(R.id.vno);
+                TextView tw4=(TextView)mview.findViewById(R.id.vnm);
                 tw4.setText(vehicleNo);
             }
 

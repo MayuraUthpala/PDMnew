@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.mayur.pdm.SendingPushNotifications">
+    tools:context="com.example.mayur.pdm.UIforBooking">
+
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/notify"
-       android:text="Send Notifications"
+        android:id="@+id/bknw"
+        android:text="Book Now"
         android:layout_marginTop="200dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
@@ -20,13 +21,14 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/offerslist"
-        android:text="Offers"
+        android:id="@+id/clnw"
+        android:text="Cancel"
         android:layout_marginTop="250dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:background="@color/nnn"
         android:textStyle="bold"
         android:textSize="16dp"/>
+
 
 </RelativeLayout>

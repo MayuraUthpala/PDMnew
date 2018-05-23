@@ -28,6 +28,7 @@ dependencies {
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support:cardview-v7:26.1.0'
     implementation 'com.android.support:design:26.1.0'
+    //noinspection GradleCompatible
     implementation 'com.google.android.gms:play-services-maps:15.0.1'
     implementation 'com.android.support:recyclerview-v7:26.1.0'
     implementation 'com.squareup.picasso:picasso:2.5.2'
@@ -47,6 +48,8 @@ dependencies {
 
     implementation 'com.firebase:firebase-client-android:2.5.2'
     implementation 'com.github.PhilJay:MPAndroidChart:v2.0.9'
+
+    implementation 'com.paypal.sdk:paypal-android-sdk:2.15.3'
 
 }
 apply plugin: 'com.google.gms.google-services'

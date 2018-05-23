@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
                                     startActivity(new Intent(getApplicationContext(), LoginActivity.class));
                                     break;
                                 case (R.id.bookings):
-                                    startActivity(new Intent(getApplicationContext(),RetrieveBooking.class));
+                                    startActivity(new Intent(getApplicationContext(),ListOFBookings.class));
                                     break;
                                 case (R.id.noti):
                                     startActivity(new Intent(getApplicationContext(),SendingPushNotifications.class));

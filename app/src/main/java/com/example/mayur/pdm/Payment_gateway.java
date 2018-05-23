@@ -1,6 +1,7 @@
 package com.example.mayur.pdm;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -27,6 +28,7 @@ public class Payment_gateway extends AppCompatActivity {
     String method[]={"debitCard","creditCard"};
     ArrayAdapter<String> arrayAdapter;
     Button proceed;
+    Button viewbutton;
     EditText editText;
     TextView getcharge;
     TextView FirstName;
@@ -54,10 +56,13 @@ public class Payment_gateway extends AppCompatActivity {
         proceed=(Button)findViewById(R.id.proceed);
         editText=(EditText)findViewById(R.id.editText);
         FirstName=(TextView) findViewById(R.id.idd);
+        viewbutton=(Button)findViewById(R.id.viewbutton);
 
         proceed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                viewbutton.setVisibility(View.VISIBLE);
 
                 String num = editText.getText().toString().trim();
                 int numT = 0;
@@ -116,6 +121,25 @@ public class Payment_gateway extends AppCompatActivity {
             }
         });
 
+        viewbutton.setOnClickListener(new View.OnClickListener() {
 
+            String servtype=getIntent().getStringExtra("service");
+            String scgarge=getIntent().getStringExtra("price");
+            String dates=getIntent().getStringExtra("date");
+            String tslot=getIntent().getStringExtra("timeslot");
+            String regino=getIntent().getStringExtra("regnum");
+            String make=getIntent().getStringExtra("model");
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Payment_gateway.this,CustomerViewBooking.class);
+                intent.putExtra("service",servtype);
+                intent.putExtra("price",scgarge);
+                intent.putExtra("date",dates);
+                intent.putExtra("timeslot",tslot);
+                intent.putExtra("regnum",regino);
+                intent.putExtra("model",make);
+                startActivity(intent);
+            }
+        });
     }
 }

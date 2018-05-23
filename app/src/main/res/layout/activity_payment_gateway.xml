@@ -81,11 +81,18 @@
             android:text="Confirm"
             android:background="@color/nnn" />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/viewbutton"
+        android:background="@color/nnn"
+        android:textColor="@color/black"
+        android:text="View Booking"
+        android:visibility="gone"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/idd"
-        android:visibility="invisible"/>
+        android:id="@+id/idd"/>
 
 
 </LinearLayout>

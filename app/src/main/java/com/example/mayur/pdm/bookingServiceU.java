@@ -100,6 +100,11 @@ public class bookingServiceU extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Enter Vehicle Model!", Toast.LENGTH_SHORT).show();
                     return;
                 }
+                String dt=date.getText().toString();
+                if(TextUtils.isEmpty(dt)){
+                    Toast.makeText(getApplicationContext(), "Select Date!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
                 String servicetp=getuname.getText().toString();
                 String servprice=getprc.getText().toString();
@@ -108,7 +113,7 @@ public class bookingServiceU extends AppCompatActivity {
                 String regno=editText1.getText().toString();
                 String model=editText2.getText().toString();
 
-                Intent intent=new Intent(bookingServiceU.this,Payment_gateway.class);
+                Intent intent=new Intent(bookingServiceU.this,PaypalORCredit.class);
                 intent.putExtra("service",servicetp);
                 intent.putExtra("price",servprice);
                 intent.putExtra("date",datet);
@@ -116,6 +121,16 @@ public class bookingServiceU extends AppCompatActivity {
                 intent.putExtra("regnum",regno);
                 intent.putExtra("model",model);
                 startActivity(intent);
+
+/*                Intent intent1=new Intent(bookingServiceU.this,PayPal.class);
+                intent1.putExtra("service",servicetp);
+                intent1.putExtra("price",servprice);
+                intent1.putExtra("date",datet);
+                intent1.putExtra("timeslot",time);
+                intent1.putExtra("regnum",regno);
+                intent1.putExtra("model",model);
+                startActivity(intent1);*/
+
 
             }
         });
