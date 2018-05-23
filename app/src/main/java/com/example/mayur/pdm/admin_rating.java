@@ -72,7 +72,7 @@ public class admin_rating extends AppCompatActivity {
                             viewHolder.setFeedback(model.getFeedback());
                             viewHolder.setPhone(model.getUserId());
                             viewHolder.setDate(model.getDate());
-                            viewHolder.setReg(model.getModel());
+                            viewHolder.setReg(model.getVehicleNo());
 
                         }
                     };
@@ -88,7 +88,7 @@ public class admin_rating extends AppCompatActivity {
                             viewHolder.setFeedback(model.getFeedback());
                             viewHolder.setPhone(model.getUserId());
                             viewHolder.setDate(model.getDate());
-                            viewHolder.setReg(model.getModel());
+                            viewHolder.setReg(model.getVehicleNo());
 
                         }
                     };
@@ -104,7 +104,7 @@ public class admin_rating extends AppCompatActivity {
                             viewHolder.setFeedback(model.getFeedback());
                             viewHolder.setPhone(model.getUserId());
                             viewHolder.setDate(model.getDate());
-                            viewHolder.setReg(model.getModel());
+                            viewHolder.setReg(model.getVehicleNo());
 
                         }
                     };
@@ -120,7 +120,7 @@ public class admin_rating extends AppCompatActivity {
                             viewHolder.setFeedback(model.getFeedback());
                             viewHolder.setPhone(model.getUserId());
                             viewHolder.setDate(model.getDate());
-                            viewHolder.setReg(model.getModel());
+                            viewHolder.setReg(model.getVehicleNo());
 
                         }
                     };
@@ -136,7 +136,7 @@ public class admin_rating extends AppCompatActivity {
                             viewHolder.setFeedback(model.getFeedback());
                             viewHolder.setPhone(model.getUserId());
                             viewHolder.setDate(model.getDate());
-                            viewHolder.setReg(model.getModel());
+                            viewHolder.setReg(model.getVehicleNo());
 
                         }
                     };

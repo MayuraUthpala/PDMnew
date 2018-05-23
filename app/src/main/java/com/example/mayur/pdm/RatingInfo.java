@@ -10,17 +10,23 @@ public class RatingInfo {
     private Long rating;
     private String Date;
     private String Model;
+    private String VehicleNo;
     //timestamp, customer
 
     public RatingInfo(){
     }
 
-    public RatingInfo(String feedback, String userId, Long rating, String date, String model) {
+
+    public RatingInfo(String feedback, String userId, Long rating, String date,String vehicleNo) {
         this.feedback = feedback;
         UserId = userId;
         this.rating = rating;
         Date = date;
-        Model = model;
+        VehicleNo = vehicleNo;
+    }
+
+    public String getVehicleNo() {
+        return VehicleNo;
     }
 
     public String getDate() {
