@@ -86,7 +86,7 @@
         android:layout_marginTop="20dip"
         android:background="@color/nnn"
         android:text="@string/btn_addProfile"
-        android:textColor="@android:color/black" />
+        android:textColor="@android:color/white" />
 
     </LinearLayout>
 

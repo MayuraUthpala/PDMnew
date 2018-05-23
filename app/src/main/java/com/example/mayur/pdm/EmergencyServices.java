@@ -20,6 +20,7 @@ public class EmergencyServices extends AppCompatActivity implements View.OnClick
         setSupportActionBar(mToolbar);
         getSupportActionBar().setTitle("Emergency Service");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        mToolbar.setTitleTextColor(getResources().getColor(android.R.color.white));
 
         //define cards of emergency
         help = (CardView) findViewById(R.id.ems_help);

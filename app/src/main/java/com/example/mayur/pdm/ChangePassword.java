@@ -33,6 +33,7 @@ public class ChangePassword extends AppCompatActivity {
         setSupportActionBar(mToolbar);
         getSupportActionBar().setTitle("Change Password");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        mToolbar.setTitleTextColor(getResources().getColor(android.R.color.white));
 
         pass = (EditText) findViewById(R.id.password);
         cpass = (EditText) findViewById(R.id.cpassword);

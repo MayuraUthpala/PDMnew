@@ -40,6 +40,8 @@ public class change_phone extends AppCompatActivity {
         setSupportActionBar(mToolbar);
         getSupportActionBar().setTitle("User Phone Number");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        mToolbar.setTitleTextColor(getResources().getColor(android.R.color.white));
+
         Phone = (EditText) findViewById(R.id.changePhone);
         change = (Button) findViewById(R.id.edit_phone);
 

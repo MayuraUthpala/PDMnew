@@ -6,6 +6,10 @@
     android:layout_height="match_parent"
     tools:context="com.example.mayur.pdm.Contact_us">
 
+    <include
+        android:id="@+id/tbrContact"
+        layout="@layout/app_bar_layout"></include>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

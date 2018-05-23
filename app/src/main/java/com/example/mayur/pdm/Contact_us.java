@@ -1,17 +1,17 @@
 package com.example.mayur.pdm;
 
-import android.content.Intent;
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Toast;
 
 public class Contact_us extends AppCompatActivity {
@@ -20,6 +20,7 @@ public class Contact_us extends AppCompatActivity {
     private Button callid;
     private Button wtsapp;
 
+    private Toolbar mToolbar;
     private static final int REQUEST_CALL = 1;
 
 
@@ -27,6 +28,12 @@ public class Contact_us extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact_us);
+
+        mToolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.tbrContact);
+        setSupportActionBar(mToolbar);
+        getSupportActionBar().setTitle("Contact Us");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        mToolbar.setTitleTextColor(getResources().getColor(android.R.color.white));
 
         emailid = (Button) findViewById(R.id.emailid);
         emailid.setOnClickListener(new View.OnClickListener() {

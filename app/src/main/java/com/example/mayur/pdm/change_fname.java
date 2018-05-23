@@ -42,6 +42,8 @@ public class change_fname extends AppCompatActivity {
         setSupportActionBar(mToolbar);
         getSupportActionBar().setTitle("User First Name");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        mToolbar.setTitleTextColor(getResources().getColor(android.R.color.white));
+
         FirstName = (EditText) findViewById(R.id.changeFName);
         change = (Button) findViewById(R.id.edit_fname);
 

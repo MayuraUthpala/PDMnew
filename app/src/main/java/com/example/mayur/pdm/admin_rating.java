@@ -44,6 +44,7 @@ public class admin_rating extends AppCompatActivity {
         setSupportActionBar(mToolbar);
         getSupportActionBar().setTitle("Rating History");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        mToolbar.setTitleTextColor(getResources().getColor(android.R.color.white));
 
         spinner_num=(Spinner)findViewById(R.id.spinner);
         arrayAdapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,stars);
@@ -55,7 +56,7 @@ public class admin_rating extends AppCompatActivity {
         hisList.setLayoutManager(new LinearLayoutManager(this));
 
         database = FirebaseDatabase.getInstance();
-        ref = database.getReference().child("booking");
+        ref = database.getReference().child("Bookings");
 
         go.setOnClickListener(new View.OnClickListener() {
             @Override

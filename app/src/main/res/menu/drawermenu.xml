@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/EmSer" android:title="Emergency Service" />
-    <item android:id="@+id/Dul" android:title="Maintenance" />
-    <item android:id="@+id/book" android:title="Booking"/>
-    <item android:id="@+id/Upasp" android:title="Spare Parts"  android:icon="@drawable/ic_build_black_24dp"/>/>
-    <item android:id="@+id/faqs" android:title="FAQs" />
-
+    <item android:id="@+id/EmSer" android:title="Emergency Service"
+        android:icon="@drawable/baseline_notification_important_black_24dp"/>
+    <item android:id="@+id/Dul" android:title="Maintenance"
+        android:icon="@drawable/ic_build_black_24dp"/>
+    <item android:id="@+id/book" android:title="Booking"
+        android:icon="@drawable/baseline_departure_board_black_24dp"/>
+    <item android:id="@+id/Upasp" android:title="Spare Parts"  android:icon="@drawable/baseline_store_black_24dp"/>/>
+    <item android:id="@+id/faqs" android:title="FAQs"
+        android:icon="@drawable/baseline_question_answer_black_24dp"/>
     <item android:id="@+id/nav_profile"
         android:title="My Profile" android:icon="@mipmap/ic_perm_identity_black_24dp"/>
 
