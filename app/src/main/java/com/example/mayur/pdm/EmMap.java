@@ -91,6 +91,7 @@ public class EmMap extends FragmentActivity implements OnMapReadyCallback {
                 if (listPoints.size() == 1) {
                     //Add first marker to the map
                     markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE));
+                    android.widget.Toast.makeText(getApplicationContext(), "Touch and Mark the point to go", android.widget.Toast.LENGTH_LONG).show();
                 } else {
                     //Add second marker to the map
                     markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN));
