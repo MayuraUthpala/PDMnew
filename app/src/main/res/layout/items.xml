@@ -3,14 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:backgroundTint="@color/ni"
+    android:backgroundTint="@color/white"
     app:cardCornerRadius="4dp">
     <RelativeLayout
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="6dp"
-        android:background="@color/nik">
+        android:background="@color/white">
 
              <TextView
                  android:id="@+id/txtv1"
@@ -22,23 +22,13 @@
                  android:textStyle="bold"
                  android:layout_alignParentTop="true"
                  />
-        <TextView
-            android:id="@+id/txtv6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="(3Mon/3000mi)"
-            android:textColor="@color/colorAccen"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            android:layout_toRightOf="@+id/txtv1"
-            android:layout_alignParentTop="true"
-            />
+
         <TextView
             android:id="@+id/txtv2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Last Checked"
-            android:textColor="@color/bl"
+            android:textColor="@color/black"
             android:textSize="14sp"
             android:textStyle="bold"
             android:layout_below="@+id/txtv1"
@@ -48,7 +38,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
-            android:textColor="@color/bl"
+            android:textColor="@color/black"
             android:textSize="14sp"
             android:textStyle="bold"
             android:layout_below="@+id/txtv1"
@@ -59,7 +49,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Next Check"
-            android:textColor="@color/bl"
+            android:textColor="@color/black"
             android:textSize="14sp"
             android:textStyle="bold"
             android:layout_below="@+id/txtv2"
@@ -69,7 +59,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
-            android:textColor="@color/bl"
+            android:textColor="@color/black"
             android:textSize="14sp"
             android:textStyle="bold"
             android:layout_below="@+id/txtv3"
@@ -80,7 +70,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Replace"
-            android:textColor="@color/bl"
+            android:textColor="@color/black"
             android:textSize="14sp"
             android:textStyle="bold"
             android:layout_below="@+id/txtv4"
@@ -90,7 +80,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
-            android:textColor="@color/bl"
+            android:textColor="@color/black"
             android:textSize="14sp"
             android:textStyle="bold"
             android:layout_below="@+id/txtv5"

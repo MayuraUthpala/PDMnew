@@ -21,6 +21,10 @@
         android:id="@+id/logout"
         android:icon="@mipmap/ic_exit_to_app_black_24dp"
         android:title="Logout" />
+    <item
+        android:id="@+id/gallery"
+        android:icon="@drawable/baseline_perm_media_black_18dp"
+        android:title="Gallery"/>
 
     <item android:title="Bookings" android:id="@+id/bookings"/>
     <item android:title="Offers" android:id="@+id/noti"/>

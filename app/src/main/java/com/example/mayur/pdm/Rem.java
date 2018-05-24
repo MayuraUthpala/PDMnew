@@ -8,7 +8,7 @@ public class Rem {
     private String Date;
     private String Service;
 
-    public Rem(String Date,String Service)
+    public Rem(String Date, String Service)
     {
         this.Date=Date;
         this.Service=Service;

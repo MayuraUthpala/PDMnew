@@ -20,7 +20,7 @@ public class Items {
 
 
 
-    public Items( String txt2, String txt4, String txt7)
+    public Items(String txt2, String txt4, String txt7)
     {
        // mtxt1 = txt1;
         mtxt2 = txt2;

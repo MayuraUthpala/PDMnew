@@ -73,10 +73,14 @@
             android:parentActivityName=".ViewProfileActivity" />
         <activity android:name=".Maintain" />
         <activity android:name=".ItemIn" />
-        <activity android:name=".Stat" />
-        <activity android:name=".Reminder" />
         <activity android:name=".Fueldul" />
         <activity android:name=".Fuel" />
+        <activity android:name=".AdminGallery" />
+        <activity android:name=".Bar" />
+        <activity android:name=".UserGallery" />
+        <activity android:name=".Stat" />
+        <activity android:name=".Reminder" />
+
         <activity
             android:name=".SpareParts.views.SparePartsActivity"
             android:parentActivityName=".MainActivity" />
@@ -162,6 +166,7 @@
         <activity android:name=".PaymentDetails" />
         <activity android:name=".ListOFBookings" />
         <activity android:name=".CustomerViewBooking"></activity>
+        <activity android:name=".EditImage"></activity>
     </application>
 
 </manifest>

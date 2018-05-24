@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/nik"
+    android:background="@color/white"
     android:orientation="vertical"
     android:weightSum="10"
     tools:context="com.example.mayur.pdm.ItemIn">
@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@color/nia">
+        android:background="#795548">
 
         <TableLayout
             android:layout_width="match_parent"
@@ -31,9 +31,8 @@
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_marginLeft="10dp"
-                    android:text="Cancel"
                     android:textAlignment="center"
-                    android:textColor="@color/ni"
+                    android:textColor="@color/black"
                     android:textSize="20sp" />
 
                 <TextView
@@ -45,7 +44,7 @@
 
                     android:text="Service"
                     android:textAlignment="center"
-                    android:textColor="@color/ni"
+                    android:textColor="@color/black"
                     android:textSize="30sp" />
 
                 <TextView
@@ -56,7 +55,7 @@
                     android:layout_marginRight="10dp"
                     android:text="Save"
                     android:textAlignment="center"
-                    android:textColor="@color/ni"
+                    android:textColor="@color/black"
                     android:textSize="20sp" />
 
             </TableRow>
@@ -67,7 +66,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="9"
-        android:background="@color/nik">
+        android:background="@color/white">
 
         <TableLayout
             android:layout_width="match_parent"
@@ -88,7 +87,7 @@
                     android:layout_gravity="left"
                     android:gravity="center"
                     android:text="Service"
-                    android:textColor="@color/ni"
+                    android:textColor="@color/black"
                     android:textSize="16dp" />
 
 
@@ -121,7 +120,7 @@
                     android:layout_gravity="left"
                     android:gravity="center"
                     android:text="Date"
-                    android:textColor="@color/ni"
+                    android:textColor="@color/black"
                     android:textSize="16dp" />
 
                 <TextView
@@ -130,7 +129,7 @@
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:text="Select Date"
-                    android:textColor="@color/ni"
+                    android:textColor="@color/black"
                     android:textSize="16dp" />
 
 
@@ -148,7 +147,7 @@
                     android:layout_gravity="left"
                     android:gravity="center"
                     android:text="Next_Check"
-                    android:textColor="@color/ni"
+                    android:textColor="@color/black"
                     android:textSize="16dp" />
 
 
@@ -157,7 +156,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="center"
+                    android:hint="Next Checking Date"
                     android:layout_gravity="center"
+                    android:textColor="@color/black"
                     android:textSize="18dp"
                     android:ems="10"
                     android:inputType="date" />
@@ -184,7 +185,7 @@
                             android:id="@+id/rep"
                             android:layout_height="match_parent"
                             android:text="Replace"
-                            android:textColor="@color/ni"
+                            android:textColor="@color/black"
                             android:textSize="18dp" />
 
 
@@ -194,9 +195,10 @@
                             android:layout_width="wrap_content"
                             android:ems="10"
                             android:layout_gravity="center"
+                            android:hint="Replace Status"
                             android:gravity="center"
                             android:inputType="text"
-                            android:textColor="@color/ni"
+                            android:textColor="@color/black"
                             android:textSize="18dp" />
                     </TableRow>
 

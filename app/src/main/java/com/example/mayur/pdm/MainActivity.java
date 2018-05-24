@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
                                     startActivity(new Intent(getApplicationContext(), LoginActivity.class));
                                     break;
                                 case (R.id.bookings):
-                                    startActivity(new Intent(getApplicationContext(),ListOFBookings.class));
+                                    startActivity(new Intent(getApplicationContext(),RetrieveBooking.class));
                                     break;
                                 case (R.id.noti):
                                     startActivity(new Intent(getApplicationContext(),SendingPushNotifications.class));
@@ -93,6 +93,12 @@ public class MainActivity extends AppCompatActivity {
                                 case (R.id.adse):
                                     startActivity(new Intent(getApplicationContext(),ServiceAdding.class));
                                     break;
+                                case (R.id.gallery):
+                                    startActivity(new Intent(getApplicationContext(),AdminGallery.class));
+                                    break;
+
+
+
                                 //return true;
 
                             }
