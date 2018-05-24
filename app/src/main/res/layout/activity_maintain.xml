@@ -9,7 +9,7 @@
     android:weightSum="10"
     tools:context="com.example.mayur.pdm.Maintain">
     <RelativeLayout
-        android:background="@color/nia"
+        android:background="#795548"
         android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="0dp">
@@ -42,7 +42,7 @@
                     android:layout_marginTop="6dp"
                     android:text="Maintenance"
                     android:textAlignment="center"
-                    android:textColor="@color/ni"
+                    android:textColor="@color/black"
                     android:textSize="30sp" />
 
                 <ImageView
@@ -65,7 +65,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="4dp"
-            android:background="@color/nn1n"
+            android:background="@color/white"
             android:scrollbars="vertical" />
     </RelativeLayout>
 </LinearLayout>

@@ -15,6 +15,7 @@ public class Fueldul extends AppCompatActivity {
         CardView fue = findViewById(R.id.f1);
         CardView plu = findViewById(R.id.mm);
         CardView rr = findViewById(R.id.rid);
+        CardView gal = findViewById(R.id.gid);
         fue.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -25,7 +26,7 @@ public class Fueldul extends AppCompatActivity {
 
 
         });
-       plu.setOnClickListener(new View.OnClickListener()
+        plu.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view) {
@@ -36,13 +37,21 @@ public class Fueldul extends AppCompatActivity {
 
         });
 
-       rr.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View view) {
-               Intent re1 = new Intent(Fueldul.this,Reminder.class);
-               startActivity(re1);
-           }
-       });
+        rr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent re1 = new Intent(Fueldul.this,Reminder.class);
+                startActivity(re1);
+            }
+        });
+
+        gal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent g = new Intent(Fueldul.this, UserGallery.class);
+                startActivity(g);
+            }
+        });
 
 
 

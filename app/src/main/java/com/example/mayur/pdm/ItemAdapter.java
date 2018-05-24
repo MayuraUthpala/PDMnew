@@ -46,7 +46,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemHolder> {
             mTextView3 = itemView.findViewById(R.id.txtv3);
             mTextView4 = itemView.findViewById(R.id.txtv4);
             mTextView5 = itemView.findViewById(R.id.txtv5);
-            mTextView6 = itemView.findViewById(R.id.txtv6);
+          //  mTextView6 = itemView.findViewById(R.id.txtv6);
             mTextView7 = itemView.findViewById(R.id.txtv7);
             mTextView8 = itemView.findViewById(R.id.txtv8);
 

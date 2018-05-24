@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -13,6 +14,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.firebase.client.Firebase;
 
@@ -84,17 +86,29 @@ public class ItemIn extends AppCompatActivity {
                 String valu2 = tx7.getText().toString();
                 String valu3 = tx10.getText().toString();
 
-               Firebase childrk = mrootre.child(record);
-               childrk.child(ky).setValue(record);
+                if (TextUtils.isEmpty(valu1)||TextUtils.isEmpty(valu2)||TextUtils.isEmpty(valu3))
+                {
+                    Toast.makeText(ItemIn.this, "Every fields should be filled", Toast.LENGTH_SHORT).show();
+                    return;
 
-                Firebase childr = mrootre.child(key1);
-                childrk.child(key1).setValue(valu1);
+                }
+                else {
+
+                    Firebase childrk = mrootre.child(record);
+                    childrk.child(ky).setValue(record);
+
+                    Firebase childr = mrootre.child(key1);
+                    childrk.child(key1).setValue(valu1);
 
 
-                Firebase childr1 = mrootre.child(key2);
-                childrk.child(key2).setValue(valu2);
-                Firebase childr2 = mrootre.child(key3);
-                childrk.child(key3).setValue(valu3);
+                    Firebase childr1 = mrootre.child(key2);
+                    childrk.child(key2).setValue(valu2);
+                    Firebase childr2 = mrootre.child(key3);
+                    childrk.child(key3).setValue(valu3);
+
+                    Toast.makeText(ItemIn.this, "Successfully Updated", Toast.LENGTH_SHORT).show();
+
+                }
 
 
             }

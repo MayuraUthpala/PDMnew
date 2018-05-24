@@ -12,42 +12,41 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:background="#795548"
         android:layout_weight="1">
 
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:background="#795548"
-            android:padding="4dp"
-            android:stretchColumns="1">
 
-            <TableRow>
-
-                <TextView />
 
                 <TextView
-                    android:id="@+id/txsta"
+                    android:id="@+id/txsta1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
-                    android:text="STATISTICS"
+                    android:text="BARCHART"
                     android:textAlignment="center"
                     android:textColor="@color/black"
                     android:textSize="30sp" />
 
-            </TableRow>
-        </TableLayout>
-    </RelativeLayout>
 
+
+    </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="4"
-        android:background="@color/white">
+        android:layout_weight="5">
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/barc"
+            ></com.github.mikephil.charting.charts.BarChart>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4">
 
         <TableLayout
             android:layout_width="match_parent"
@@ -60,67 +59,37 @@
             android:stretchColumns="1">
 
             <TableRow>
-
-                <Spinner
-                    android:id="@+id/spin"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    />
-
-                <EditText
-                    android:id="@+id/id_eyear"
-                    android:layout_width="5dp"
-                    android:layout_height="wrap_content"
-                    android:hint="Year"
-                    android:ems="10"
-                    android:inputType="number"
+                <TextView
+                    android:id="@+id/id_mil1"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="left"
+                    android:gravity="center"
+                    android:text="Mileage"
                     android:textColor="@color/black"
                     android:textSize="16dp" />
 
-                <Button
-                    android:id="@+id/gen"
+                <TextView
+                    android:id="@+id/id_emil1"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="left"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_gravity="left"
                     android:gravity="center"
-                    android:text="Calculate"
-                    android:textColor="@color/white"
-                    android:background="@color/nnn"
+                    android:text="Km"
+                    android:textColor="@color/black"
                     android:textSize="16dp" />
 
             </TableRow>
-        <TableRow>
-            <TextView
-                android:id="@+id/id_mil"
-                android:layout_height="match_parent"
-                android:layout_gravity="left"
-                android:gravity="center"
-                android:text="Mileage"
-                android:textColor="@color/black"
-                android:textSize="16dp" />
-
-            <TextView
-                android:id="@+id/id_emil"
-                android:layout_height="match_parent"
-                android:layout_gravity="left"
-                android:gravity="center"
-                android:textColor="@color/black"
-                android:textSize="16dp" />
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="left"
-                android:gravity="center"
-                android:text="Km"
-                android:textColor="@color/black"
-                android:textSize="16dp" />
-
-        </TableRow>
             <TableRow>
                 <TextView
-                    android:id="@+id/id_fu"
+                    android:id="@+id/id_fu1"
                     android:layout_height="match_parent"
                     android:layout_gravity="left"
                     android:gravity="center"
@@ -129,15 +98,16 @@
                     android:textSize="14dp" />
 
                 <TextView
-                    android:id="@+id/id_efu"
+                    android:id="@+id/id_efu1"
+                    android:layout_width="12dp"
                     android:layout_height="match_parent"
                     android:layout_gravity="left"
-                    android:gravity="center"
 
+                    android:gravity="center"
                     android:textColor="@color/black"
                     android:textSize="16dp" />
 
--->
+    -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
@@ -150,7 +120,7 @@
             </TableRow>
             <TableRow>
                 <TextView
-                    android:id="@+id/id_cs"
+                    android:id="@+id/id_cs1"
                     android:layout_height="match_parent"
                     android:layout_gravity="left"
                     android:gravity="center"
@@ -159,7 +129,7 @@
                     android:textSize="16dp" />
 
                 <TextView
-                    android:id="@+id/id_ecs"
+                    android:id="@+id/id_ecs1"
                     android:layout_height="match_parent"
                     android:layout_gravity="left"
                     android:gravity="center"
@@ -180,7 +150,7 @@
             </TableRow>
             <TableRow>
                 <TextView
-                    android:id="@+id/id_emi"
+                    android:id="@+id/id_emi1"
                     android:layout_height="match_parent"
                     android:layout_gravity="left"
                     android:gravity="center"
@@ -189,7 +159,7 @@
                     android:textSize="14dp" />
 
                 <TextView
-                    android:id="@+id/id_eemi"
+                    android:id="@+id/id_eemi1"
                     android:layout_height="match_parent"
                     android:layout_gravity="left"
                     android:gravity="center"
@@ -207,20 +177,11 @@
                     android:textSize="14dp" />
 
             </TableRow>
-            <TextView
-                android:id="@+id/gen1"
-                android:layout_width="wrap_content"
-                android:layout_height="35dp"
-                android:layout_gravity="left"
-                android:gravity="center"
-                android:text="Generate Chart"
-                android:textColor="@color/white"
-                android:background="@drawable/rounded"
-                android:textSize="16dp" />
-    </TableLayout>
+        </TableLayout>
 
 
     </RelativeLayout>
 
 
 </LinearLayout>
+

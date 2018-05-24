@@ -7,11 +7,14 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.firebase.client.Firebase;
 
@@ -23,25 +26,33 @@ import static android.R.style.Theme_Holo_Light_Dialog_MinWidth;
  * Created by Dulip on 4/8/2018.
  */
 
-public class Fuel extends Activity {
+public class Fuel extends Activity{
     private TextView sbut;
+
     private TextView cdate;
     private TextView cdat;
     private TextView odo;
-    private TextView qty;
+    private Button qty;
     private TextView pri;
-    private TextView cos;
+    private Button cos;
     private TextView km;
-    private TextView em;
+    private Button em;
     private TextView kil;
-    private TextView can;
+
+
 
     private EditText eodo;
+
     private EditText eqty;
+
     private EditText epri;
+
     private EditText ecos;
+
     private EditText ekm;
+
     private EditText eem;
+
     private EditText ekil;
 
     private static final String TAG = "Fuel";
@@ -50,11 +61,11 @@ public class Fuel extends Activity {
 
     private Firebase mRootref;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fuel);
-        can = findViewById(R.id.txcan);
 
         CardView sta = findViewById(R.id.f2);
         sta.setOnClickListener(new View.OnClickListener() {
@@ -65,16 +76,6 @@ public class Fuel extends Activity {
             }
         });
 
-        can.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(Fuel.this,Fueldul.class);
-                startActivity(i);
-            }
-
-
-        });
 
         mRootref = new Firebase("https://loginapplication-43a51.firebaseio.com/Fuel");
 
@@ -136,45 +137,61 @@ public class Fuel extends Activity {
             public void onClick(View view) {
 
 
+                //add keys
+                String key1 = cdate.getText().toString();
+                String key2 = odo.getText().toString();
+                String key3 = qty.getText().toString();
+                String key4 = pri.getText().toString();
+                String key5 = cos.getText().toString();
+                String key6 = km.getText().toString();
+                String key7 = em.getText().toString();
+                String key8 = kil.getText().toString();
 
-                    //add keys
-                    String key1 = cdate.getText().toString();
-                    String key2 = odo.getText().toString();
-                    String key3 = qty.getText().toString();
-                    String key4 = pri.getText().toString();
-                    String key5 = cos.getText().toString();
-                    String key6 = km.getText().toString();
-                    String key7 = em.getText().toString();
-                    String key8 = kil.getText().toString();
+                //add values
 
-                    //add values
-                    String value1 = cdat.getText().toString();
+                String value1 = cdat.getText().toString();
 
-                    String value2 = eodo.getText().toString();
+                String value2 = eodo.getText().toString();
+
+
+                String value3 = eqty.getText().toString();
+
+
+                String value4 = epri.getText().toString();
+
+
+                String value5 = ecos.getText().toString();
+
+
+                String value6 = ekm.getText().toString();
+
+
+                String value7 = eem.getText().toString();
+
+
+                String value8 = ekil.getText().toString();
+
+
+                //calculations
+
+                // validator.validate();
+
+                if (TextUtils.isEmpty(value1)||TextUtils.isEmpty(value2)||TextUtils.isEmpty(value3)||TextUtils.isEmpty(value4)||TextUtils.isEmpty(value5)||TextUtils.isEmpty(value6)||TextUtils.isEmpty(value7)||TextUtils.isEmpty(value8))
+                //adding to database
+                {
+                    Toast.makeText(Fuel.this,"Every fields should be filled", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+               else {
                     Double val2 = Double.parseDouble(value2);
-
-                    String value3 = eqty.getText().toString();
                     Double val3 = Double.parseDouble(value3);
-
-                    String value4 = epri.getText().toString();
                     Double val4 = Double.parseDouble(value4);
-
-                    String value5 = ecos.getText().toString();
                     Double val5 = Double.parseDouble(value5);
-
-                    String value6 = ekm.getText().toString();
                     Double val6 = Double.parseDouble(value6);
-
-                    String value7 = eem.getText().toString();
                     Double val7 = Double.parseDouble(value7);
-
-                    String value8 = ekil.getText().toString();
                     Double val8 = Double.parseDouble(value8);
 
-                    //calculations
-
-
-                    //adding to database
                     Firebase childRef = mRootref.push();
                     childRef.child(key1).setValue(value1);
 
@@ -199,7 +216,11 @@ public class Fuel extends Activity {
                     Firebase childRef6 = mRootref.push();
                     childRef.child(key7).setValue(val7);
 
+                    Toast.makeText(Fuel.this, "Successfully Saved", Toast.LENGTH_SHORT).show();
+                }
             }
+
+
         });
 
         mDisplayDate = (TextView) findViewById(R.id.tvdate);
@@ -230,4 +251,7 @@ public class Fuel extends Activity {
             }
         };
     }
+
+
+
 }
