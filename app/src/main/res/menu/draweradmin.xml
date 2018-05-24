@@ -17,16 +17,21 @@
         android:id="@+id/RatingAdmin"
         android:icon="@mipmap/ic_grade_black_24dp"
         android:title="Rating Viewer" />
-    <item
-        android:id="@+id/logout"
-        android:icon="@mipmap/ic_exit_to_app_black_24dp"
-        android:title="Logout" />
+
     <item
         android:id="@+id/gallery"
         android:icon="@drawable/baseline_perm_media_black_18dp"
         android:title="Gallery"/>
 
-    <item android:title="Bookings" android:id="@+id/bookings"/>
-    <item android:title="Offers" android:id="@+id/noti"/>
-    <item android:title="Services" android:id="@+id/adse"/>
+    <item android:title="Bookings" android:id="@+id/bookings"
+        android:icon="@drawable/baseline_all_inbox_black_24dp"
+        />
+    <item android:title="Offers" android:id="@+id/noti"
+        android:icon="@drawable/baseline_description_black_24dp"/>
+    <item android:title="Services" android:id="@+id/adse"
+        android:icon="@drawable/baseline_shop_two_black_24dp"/>\
+    <item
+        android:id="@+id/logout"
+        android:icon="@mipmap/ic_exit_to_app_black_24dp"
+        android:title="Logout" />
 </menu>
