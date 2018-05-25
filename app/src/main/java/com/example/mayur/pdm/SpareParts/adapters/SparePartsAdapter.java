@@ -3,15 +3,18 @@ package com.example.mayur.pdm.SpareParts.adapters;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.mayur.pdm.R;
 import com.example.mayur.pdm.SpareParts.models.Sparepart;
 import com.example.mayur.pdm.SpareParts.views.SPAddActivity;
+import com.example.mayur.pdm.SpareParts.views.SparePartsActivity;
 
 import java.util.List;
 
@@ -22,9 +25,13 @@ import java.util.List;
 public class SparePartsAdapter extends RecyclerView.Adapter<SparePartsAdapter.SparepartViewHolder> {
 
     private List<Sparepart> mDataSet;
+    Context mContext;
+    SparePartsActivity sparePartsActivity;
 
-    public SparePartsAdapter(Context context, List<Sparepart> pDataSet) {
+    public SparePartsAdapter(SparePartsActivity activity, List<Sparepart> pDataSet) {
         this.mDataSet = pDataSet;
+        this.sparePartsActivity = activity;
+        this.mContext = activity.getBaseContext();
     }
 
     public class SparepartViewHolder extends RecyclerView.ViewHolder {
@@ -37,6 +44,7 @@ public class SparePartsAdapter extends RecyclerView.Adapter<SparePartsAdapter.Sp
         TextView txtSpUsage;
         View sparepartView;
         LinearLayout layoutSpCardDescription;
+        ImageView btnSparepartAddTocart;
 
         public SparepartViewHolder(final View itemView) {
             super(itemView);
@@ -50,15 +58,24 @@ public class SparePartsAdapter extends RecyclerView.Adapter<SparePartsAdapter.Sp
             txtSpPrice = itemView.findViewById(R.id.txtSpPrice);
             txtSpUsage = itemView.findViewById(R.id.txtSpUsage);
             layoutSpCardDescription = itemView.findViewById(R.id.layoutSpCardDescription);
+            btnSparepartAddTocart = itemView.findViewById(R.id.btnSparepartAddTocart);
 
             layoutSpCardDescription.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     String sparepartkey = mDataSet.get(getAdapterPosition()).KEY;
                     Intent intent = new Intent(itemView.getContext(), SPAddActivity.class);
-                    intent.putExtra("mode",SPAddActivity.MODE_VIEW);
+                    intent.putExtra("mode", SPAddActivity.MODE_VIEW);
                     intent.putExtra(SPAddActivity.REF_SPAREPART,sparepartkey);
                     itemView.getContext().startActivity(intent);
+                }
+            });
+
+            btnSparepartAddTocart.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Log.d("SpareParts","Cart Click : " + mDataSet.get(getAdapterPosition()).sparePartName);
+                   sparePartsActivity.addToCart(mDataSet.get(getAdapterPosition()));
                 }
             });
 

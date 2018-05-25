@@ -14,6 +14,10 @@
         android:icon="@drawable/ic_build_black_24dp"
         android:title="Spare Parts Manager" />
     <item
+        android:id="@+id/SparePartOrders"
+        android:icon="@drawable/ic_book_black_24dp"
+        android:title= "Spare Part Orders"/>
+    <item
         android:id="@+id/RatingAdmin"
         android:icon="@mipmap/ic_grade_black_24dp"
         android:title="Rating Viewer" />

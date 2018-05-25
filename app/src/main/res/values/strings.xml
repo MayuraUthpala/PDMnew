@@ -54,6 +54,7 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_em_map">Map</string>
     <string name="title_activity_spare_parts_admin">Spare Parts Admin Activity</string>
+    <string name="addtocart">Add</string>
 
 
     <string-array name="sp_manufacturer_array">

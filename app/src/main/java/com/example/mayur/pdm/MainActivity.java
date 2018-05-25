@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.mayur.pdm.SpareParts.views.SparePartOrderActivity;
 import com.example.mayur.pdm.SpareParts.views.SparePartsActivity;
 import com.example.mayur.pdm.SpareParts.views.SparePartsAdminActivity;
 import com.google.firebase.auth.FirebaseAuth;
@@ -79,6 +80,10 @@ public class MainActivity extends AppCompatActivity {
                                 case (R.id.SparePartAdmin):
                                     startActivity(new Intent(getApplicationContext(), SparePartsAdminActivity.class));
                                     break;
+                                case (R.id.SparePartOrders):
+                                    startActivity(new Intent(getApplicationContext(), SparePartOrderActivity.class));
+                                    break;
+
 
                                 case (R.id.logout):
                                     signOut();

@@ -89,6 +89,7 @@
             android:label="@string/title_activity_spare_parts_admin"
             android:theme="@style/AppTheme" />
         <activity android:name=".SpareParts.views.SPAddActivity" />
+        <activity android:name=".SpareParts.views.SparePartOrderActivity"></activity>
 
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.

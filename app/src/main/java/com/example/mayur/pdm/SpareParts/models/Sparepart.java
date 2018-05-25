@@ -1,9 +1,11 @@
 package com.example.mayur.pdm.SpareParts.models;
 
+import com.google.firebase.database.IgnoreExtraProperties;
+
 /**
  * Created by LENOVO on 4/30/2018.
  */
-
+@IgnoreExtraProperties
 public class Sparepart {
 
     public String KEY;

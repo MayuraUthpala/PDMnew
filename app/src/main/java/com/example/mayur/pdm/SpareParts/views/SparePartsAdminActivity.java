@@ -13,7 +13,6 @@ import android.util.Log;
 import android.view.View;
 
 import com.example.mayur.pdm.R;
-import com.example.mayur.pdm.SpareParts.adapters.SparePartsAdapter;
 import com.example.mayur.pdm.SpareParts.adapters.SparePartsaAdminAdapter;
 import com.example.mayur.pdm.SpareParts.models.Sparepart;
 import com.example.mayur.pdm.SpareParts.utils.DBHelper;
@@ -48,7 +47,7 @@ public class SparePartsAdminActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(),SPAddActivity.class);
-                intent.putExtra("mode",SPAddActivity.MODE_ADD);
+                intent.putExtra("mode", SPAddActivity.MODE_ADD);
                 intent.putExtra("title","Add New Spare part");
                 startActivity(intent);
             }

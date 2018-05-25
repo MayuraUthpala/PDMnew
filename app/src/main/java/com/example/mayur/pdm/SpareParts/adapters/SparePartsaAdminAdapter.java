@@ -59,7 +59,7 @@ public class SparePartsaAdminAdapter extends RecyclerView.Adapter<SparePartsaAdm
                 public void onClick(View view) {
                     String sparepartkey = mDataSet.get(getAdapterPosition()).KEY;
                     Intent intent = new Intent(itemView.getContext(), SPAddActivity.class);
-                    intent.putExtra("mode",SPAddActivity.MODE_VIEW);
+                    intent.putExtra("mode", SPAddActivity.MODE_VIEW);
                     intent.putExtra(SPAddActivity.REF_SPAREPART,sparepartkey);
                     itemView.getContext().startActivity(intent);
                 }
@@ -70,7 +70,7 @@ public class SparePartsaAdminAdapter extends RecyclerView.Adapter<SparePartsaAdm
                 public void onClick(View view) {
                     String sparepartkey = mDataSet.get(getAdapterPosition()).KEY;
                     Intent intent = new Intent(itemView.getContext(), SPAddActivity.class);
-                    intent.putExtra("mode",SPAddActivity.MODE_UPDATE);
+                    intent.putExtra("mode", SPAddActivity.MODE_UPDATE);
                     intent.putExtra(SPAddActivity.REF_SPAREPART,sparepartkey);
                     itemView.getContext().startActivity(intent);
                 }
@@ -81,7 +81,7 @@ public class SparePartsaAdminAdapter extends RecyclerView.Adapter<SparePartsaAdm
                 public void onClick(View view) {
                     String sparepartkey = mDataSet.get(getAdapterPosition()).KEY;
                     Intent intent = new Intent(itemView.getContext(), SPAddActivity.class);
-                    intent.putExtra("mode",SPAddActivity.MODE_DELETE);
+                    intent.putExtra("mode", SPAddActivity.MODE_DELETE);
                     intent.putExtra(SPAddActivity.REF_SPAREPART,sparepartkey);
                     itemView.getContext().startActivity(intent);
                 }

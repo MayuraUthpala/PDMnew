@@ -1,5 +1,6 @@
 package com.example.mayur.pdm.SpareParts.utils;
 
+import com.example.mayur.pdm.SpareParts.models.CartSparepart;
 import com.example.mayur.pdm.SpareParts.models.Sparepart;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -15,6 +16,7 @@ public class DBHelper {
 
     public final String LIST = "sparepartlist";
     public final String STRUCTURE = "sparepartstructure";
+    public final String CARTORDER = "sparepartorders";
 
     public DBHelper(){
         database = FirebaseDatabase.getInstance();
@@ -27,10 +29,17 @@ public class DBHelper {
 
     public DatabaseReference getSparepartDatabaseReference(){
         return databaseReference.child(LIST);
+
+    }public DatabaseReference getSparepartDatabaseReference(String path){
+        return databaseReference.child(LIST).child(path);
     }
 
     public DatabaseReference getSparepartStructureDatabaseReference(){
         return databaseReference.child(STRUCTURE);
+    }
+
+    public DatabaseReference getSparepartOrdersDatabaseReference(){
+        return databaseReference.child(CARTORDER);
     }
 
     public DatabaseReference getSparepartStructureDatabaseReference(String path){
@@ -62,5 +71,11 @@ public class DBHelper {
 
     public void updateSparepart(String key, Object object){
         databaseReference.child(LIST).child(key).setValue(object);
+    }
+
+    public String pushSparepartOrder(CartSparepart object){
+        String key = databaseReference.child(CARTORDER).push().getKey();
+        databaseReference.child(CARTORDER).child(key).setValue(object);
+        return key;
     }
 }
